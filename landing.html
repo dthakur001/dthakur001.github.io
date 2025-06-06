@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FloLab Landing</title>
+  <link id="tab-icon" rel="icon" type="image/gif" href="images/logos/yellow-onlyflower-logo.png">
+  <link rel="stylesheet" href="navbar.css" />
+  <link rel="stylesheet" href="landing.css" />
+</head>
+
+<body>
+  <!-- NAVBAR GRID -->
+  <div class="navbar-links">
+    <!-- Left Navbar Buttons -->
+    <div class="left-btns">
+      <div class="home-btn-div navbar-icons-width">
+        <button class="home-btn" onclick="window.location.href='index.html'">
+          <img class="anim-icon" src="images/buttons/home.gif" alt="Home Icon" />
+          <span class="nav-txt">Home</span>
+        </button>
+      </div>
+
+      <!-- DROPDOWN: Help -->
+      <div class="nav-item dropdown navbar-icons-width">
+        <div class="dropdown-trigger">
+          <img class="anim-icon" src="images/buttons/faq.gif" alt="Help Icon" />
+          <span class="nav-txt">Help ▾</span>
+        </div>
+        <div class="dropdown-content">
+          <a class="nav-txt" href="faq.html">FAQ</a>
+          <a class="nav-txt" href="contact.html">Contact Us</a>
+        </div>
+      </div>
+
+      <!-- DROPDOWN: Bouquets -->
+      <div class="nav-item dropdown navbar-icons-width">
+        <div class="dropdown-trigger">
+          <img class="anim-icon" src="images/logos/logo-flower.png" alt="Bouquets Icon" />
+          <span class="nav-txt">Bouquets ▾</span>
+        </div>
+        <div class="dropdown-content">
+          <a class="nav-txt" href="products.html">Pre-built</a>
+          <a class="nav-txt" href="customize.html">Customize</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- CENTER LOGO -->
+    <div class="logo-btn-div">
+      <button class="logo-btn" onclick="window.location.href='index.html'">
+        <img class="nav-logo-img" src="images/logos/main-logo.png" alt="Home Logo Button" />
+      </button>
+    </div>
+
+    <!-- Right Navbar Buttons -->
+    <div class="right-btns">
+      <div class="login-btn-div navbar-icons-width">
+        <button class="auth-link" onclick="window.location.href='login.html'">
+          <img class="anim-icon" src="images/buttons/signup.gif" alt="Sign Up Icon" />
+          <span class="nav-txt">Sign Up / Log In</span>
+        </button>
+      </div>
+
+      <div class="cart-btn-div navbar-icons-width">
+        <button class="cart-button" class="cart-link">
+          <img class="anim-icon" src="images/buttons/cart.gif" />
+          <span class="nav-txt cart-count">0</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-- END OF NAVBAR STUFF - COPY TILL HERE -->
+
+  <!-- ============== MAIN PRODUCT SECTION ============== -->
+  <div class="product-section">
+    <!-- Bouquet Title -->
+    <div class="b-title b-same">
+      <!-- JS renders it-->
+      <h1 class="bouquet-name"></h1>
+    </div>
+    <!-- Bouquet Description -->
+    <div class="b-description b-same">
+      <p class="bouquet-description">
+        An artful bouquet of peak-fresh blooms chosen for vibrant color, balance, and longevity—adding effortless
+        elegance to your occasion.
+      </p>
+      <!-- Bouquet Tags -->
+      <div class="bouquet-tags">
+        <span class="tag-title">BEST OCCASIONS</span>
+        <div class="tag-list">
+          <span class="tag-span">#Birthday</span>
+          <span class="tag-span">#Romance</span>
+          <span class="tag-span">#Wedding</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- More Bouquets -->
+    <div class="back-btn-div b-same">
+      <button id="back-btn" class="more-btn same-btn">
+        <img class="back-btn-img" src="images/buttons/back.png" alt="Go Back Arrow Img">
+        <span class="more-products">More Bouquets</span>
+      </button>
+    </div>
+
+
+    <!-- Bouquet Image -->
+    <div class="b-img b-same">
+      <!-- JS renders it-->
+      <img class="bouquet-image" src="images/bouquets/b1.png" alt="Bouquet Img" />
+    </div>
+
+    <!-- Bouquet Price -->
+    <div class="b-price b-same">
+      <p class="price-text">$24.99</p>
+    </div>
+    <!-- Bouquet Look'n'feel button -->
+    <div class="b-try b-same">
+      <button class="try-btn">
+        <img class="tryout-gif" src="images/buttons/spotlight.gif" alt="Spotlight Img" />
+        <span class="try-span">See how the<br>bouquet may<br><u>LOOK</u> like<br><u>ON YOUR<br>TABLE</u> !</span>
+      </button>
+    </div>
+
+    <!-- Bouquet Buying buttons -->
+    <div class="b-buy b-same">
+      <button class="order-btn same-btn">
+        <img class="btn-img" src="images/buttons/checkout.png" alt="Go Back Arrow Img">
+        ORDER NOW
+      </button>
+      <button class="addtocart-btn same-btn">
+        <img class="btn-img" src="images/buttons/add-to-cart.png" alt="Go Back Arrow Img">
+        ADD TO CART
+      </button>
+    </div>
+  </div>
+
+  <!--LOADING THE JS FILE at LAST
+    : This ensures the page structure is parsed before your script runs. -->
+  <script src="index.js"></script>
+  <script src="cart.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const data = JSON.parse(sessionStorage.getItem('selectedBouquet') || '{}'); // you already store this
+      const name = data.name || 'Bouquet';
+      const priceN = parseFloat((data.price || '$0').replace('$', ''));
+      const img = data.img || 'images/bouquets/b1.png';
+
+      /* Add to cart */
+      document.querySelector('.addtocart-btn').addEventListener('click', () => {
+        FlowerCart.addItem({ id: img, name, price: priceN, img });
+      });
+
+      /* Order now → cart + jump to checkout */
+      document.querySelector('.order-btn').addEventListener('click', () => {
+        FlowerCart.addItem({ id: img, name, price: priceN, img });
+        window.location.href = 'checkout.html';
+      });
+    });
+
+    /* ───────── SEND THE CURRENT BOUQUET TO look.html ───────── */
+    document.addEventListener('DOMContentLoaded', () => {
+      const tryBtn = document.querySelector('.try-btn');
+      if (!tryBtn) return;
+
+      tryBtn.addEventListener('click', () => {
+        /* grab the img inside <div class="b-img"> */
+        const imgEl = document.querySelector('.b-img .bouquet-image');
+        if (!imgEl) return;
+
+        /* extract the number from ".../b12.png"  →  12 */
+        const match = imgEl.getAttribute('src').match(/b(\d+)\.png$/);
+        const idx = match ? parseInt(match[1], 10) : 1;   // default to 1
+
+        sessionStorage.setItem('lookBouquetIdx', idx);      // hand off to look.html
+        window.location.href = 'look.html';
+      });
+    });
+  </script>
+
+</body>
+
+</html>

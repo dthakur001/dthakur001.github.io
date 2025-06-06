@@ -1,0 +1,180 @@
+.navbar-links {
+    display: grid;
+    grid-template-areas:
+        "a a b b c c"
+        "a a b b c c"
+        "a a b b c c";
+    align-content: center;
+
+    background-color: rgba(119, 136, 153, 0.6);
+    border-radius: 5rem;
+    width: 98vw;
+    height: 15vh;
+    position: relative;
+    z-index: 999;
+
+    margin: auto;
+    /* Centers the div in the body */
+    margin-top: 0.30rem;
+
+}
+
+/* NAVBAR LEFT BUTTONS STYLE */
+.left-btns {
+    grid-area: a;
+    /* background-color: rgba(119, 136, 153, 0.6); */
+    border-radius: 5rem;
+    width: calc(100vw * 0.33);
+    height: 70%;
+    align-items: center;
+
+    align-self: center;
+    justify-self: start;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+}
+.home-btn {
+    height: fit-content;
+    width: fit-content;
+    margin: auto;
+
+    display: flex;
+    flex-direction: column;
+    align-content: space-evenly;
+
+    background: none;
+    border: none;
+}
+.logo-btn-div {
+    grid-area: b;
+    width: 100%;
+    justify-self: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.logo-btn {
+    background: none;
+    border: none;
+}
+.nav-logo-img {
+    height: 120px;
+}
+
+/* NAVBAR DROPDOWN MENU STYLE SETUP */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-trigger {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #244855;
+    border-radius: 8px;
+    padding: 10px;
+    z-index: 1000;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 10px 10px;
+    color: #fbe9d0;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+.dropdown-content a:hover {
+    background-color: #e64833;
+}
+/* Keeps dropdown open on hover */
+.dropdown:hover .dropdown-content,
+.dropdown-content:hover {
+    display: block;
+}
+
+/* NAVBAR RIGHT BUTTONS STYLES */
+.right-btns {
+    grid-area: c;
+    width: calc(100vw * 0.33);
+    height: 70%;
+    border-radius: 5rem;
+
+    align-items: center;
+
+    align-self: center;
+    justify-self: end;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: right;
+}
+
+.auth-link {
+    background: none;
+    border: none;
+    position: relative;
+    right: 180%;
+}
+
+.cart-button {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2px;
+    align-items: center;
+    background: none;
+    border: none;
+    position: relative;
+    right: 60%;
+}
+
+.cart-count {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+    background: rgb(31, 0, 142);
+    height: auto;
+    width: 2.5rem;
+    margin-top: 3px;
+    border-radius: 1rem;
+}
+
+
+/* NAVBAR TEXT & SHARED STYLES */
+.nav-txt {
+    font-size: 1.25rem;
+    font-weight: 550;
+    text-wrap: nowrap;
+    margin-top: 5px;
+    color: whitesmoke;
+}
+.navbar-icons-width {
+    width: 85px;
+}
+.anim-icon {
+    height: 50px;
+    clip-path: circle(50%);
+}
+.nav-txt:hover, 
+.home-btn:hover, 
+.anim-icon:hover, 
+.auth-link:hover, 
+.logo-btn:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}

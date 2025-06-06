@@ -1,0 +1,324 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(135deg,
+            /* soft rose pink */
+            #FFC1CC 0%,
+            /* lavender lilac */
+            #D1B2FF 35%,
+            /* pale buttercup yellow */
+            #FFF9B1 70%,
+            /* minty leaf green */
+            #C8E6C9 100%);
+    overflow: clip;
+}
+
+body button {
+    cursor: pointer;
+}
+
+/* ################################# */
+
+/* ################################# */
+/* Styles for whole products interface */
+
+.products-container {
+    display: grid;
+    height: 86vh;
+    width: 98vw;
+
+    margin: auto;
+    margin-top: 0.25%;
+
+    grid-template-columns: 1.25fr 6fr;
+    grid-template-areas:
+        "a b b b b b"
+        "a b b b b b"
+        "a b b b b b"
+        "a b b b b b";
+    /* background: rgba(119, 136, 153, 0.25); */
+    
+    place-items: center;
+}
+
+.filters-div {
+    grid-area: a;
+    /* background: rgba(12, 83, 154, 0.646); */
+    justify-self: end;
+    height: 100%;
+    width: calc(96vw / 6);
+    min-width: calc(96vw / 6);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 15px;
+}
+
+.filters-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.drop-btn-div {
+    width: 100%;
+    height: 11vh;
+    background: #000;
+    border: 0.20rem solid #000;
+    border-radius: 1rem;
+    overflow: clip;
+}
+
+.drop-btn {
+    display: grid;
+    grid-template-areas: "a a a b";
+    place-items: center;
+
+    font-weight: 500;
+    font-size: 1.5rem;
+
+    width: 100%;
+    height: 11vh;
+
+    background: transparent;
+    border: 0.20rem solid #000;
+    border-radius: 1rem;
+}
+
+.product-section {
+    grid-area: b;
+    justify-self: end;
+    /* background: rgba(149, 125, 3, 0.633); */
+
+    display: grid;
+    grid-template-areas: "m";
+    height: 100%;
+    width: 98%;
+    overflow-y: auto;
+    scrollbar-color: #ff5e01 #000;
+    scrollbar-width: auto;
+}
+
+.products-div {
+    grid-area: m;
+    justify-self: start;
+    /* background: rgba(3, 149, 105, 0.633); */
+
+    height: fit-content;
+    max-width: 96%;
+    padding: 0.25rem 0.25rem 1.25rem 0.25rem;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: start;
+    gap: 7px 7px;
+}
+
+/* Styles to Design the Product Card */
+.product-card {
+    display: grid;
+    grid-template-areas:
+        "a a a a a a a"
+        "a a a a a a a"
+        "a a a a a a a"
+        "a a a a a a a"
+        "b b b b c c d"
+        "b b b b c c d";
+    background: #ece6de;
+    height: calc(((94vw / 6) * 5)/3.25);
+    width: calc(((94vw / 6) * 5)/3.25);
+    place-items: center;
+
+    border: 0.25rem solid black;
+    border-radius: 0.40rem;
+    overflow: clip;
+}
+
+.product-img-btn {
+    grid-area: a;
+    align-self: start;
+    width: 100%;
+    height: fit-content;
+    border: none;
+    background: #ece6de;
+    cursor: pointer;
+}
+
+.product-name-btn {
+    grid-area: b;
+    height: 100%;
+    width: 100%;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.bouquet-name {
+    font-weight: 600;
+    font-size: 1.25rem;
+    align-self: center;
+    justify-self: center;
+}
+
+.bouquet-price-div {
+    grid-area: c;
+
+    height: 100%;
+    width: 100%;
+    align-content: center;
+    text-align: center;
+}
+
+.bouquet-price {
+    font-weight: 600;
+    font-size: 2rem;
+    color: rgb(255, 0, 102);
+}
+
+.addtocart-btn {
+    grid-area: d;
+    height: 100%;
+    border: none;
+    border-left: 3px solid black;
+    border-top: 3px solid black;
+    border-radius: 0.25rem 0 0 0;
+    background: transparent;
+    justify-self: end;
+
+    position: relative;
+    z-index: 998;
+}
+
+.hoverEffect:hover {
+    transform: scale(1.05);
+}
+
+/* Product Card Item Dimensions & Props */
+.product-img {
+    height: calc(88vh * 0.40);
+    width: auto;
+    margin: auto;
+}
+
+.addtocart-img {
+    height: 60px;
+    width: auto;
+}
+
+/* Style for Scroll to top of products container */
+.scroll-top-div {
+    background: transparent;
+    grid-template-areas: "a";
+    border: none;
+}
+
+.scroll-top-btn {
+    grid-area: a;
+    margin: auto;
+    height: fit-content;
+    width: fit-content;
+    background: #f0f0f0;
+    border: none;
+    border-radius: 0.4rem;
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+
+.scroll-top-btn:hover {
+    transform: scale(1.05);
+    background: #000;
+    color: whitesmoke;
+    border: 0.25rem solid whitesmoke;
+}
+
+/* ################################# */
+/* Styles for Filtering elements */
+.drop-btn-txt {
+    grid-area: a;
+}
+
+.drop-arrow {
+    grid-area: b;
+    height: 40px;
+    width: auto;
+}
+
+/* ################################# */
+
+/* SELECT BUTTON STYLES */
+
+select,
+::picker(select) {
+    appearance: none;
+    width: 100%;
+    height: 8vh;
+    background: whitesmoke;
+    border: none;
+
+    font-weight: 500;
+    font-size: 1rem;
+    color: #000;
+
+
+    background-image: url('images/buttons/drop.svg');
+    background-repeat: no-repeat;
+    background-position: right 0.5em center;
+    background-size: 40px;
+
+    /* ensure the text doesn’t overlap the icon: */
+    
+    margin-top: 5px;
+    padding: 0 0.5rem 0 0.5rem;
+
+}
+
+.filter-type {
+    color: whitesmoke;
+    padding-top: 5px;
+    font-size: 1.25rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+.white-bg {
+    background-color: white;
+}
+
+/* Filter Button Styles */
+.filter-reset {
+    width: 100%;
+    height: 8vh;
+    background: #000;
+    border: 2px solid #000;
+    border-radius: 1rem;
+    overflow: clip;
+}
+
+.reset-filters-btn {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: transparent;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.reset-img {
+    height: 40px;
+    width: auto;
+    position: relative;
+    right: -0.55rem
+}
+
+.reset-txt {
+    color: whitesmoke;
+    font-size: 1.25rem;
+    text-align: center;
+    font-weight: 600;
+}

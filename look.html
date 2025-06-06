@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link id="tab-icon" rel="icon" type="image/gif" href="images/logos/yellow-onlyflower-logo.png">
+    <title>FloLab | Look & Feel</title>
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="look.css">
+</head>
+
+<body>
+    <!-- NAVBAR GRID -->
+    <div class="navbar-links">
+        <!-- Left Navbar Buttons -->
+        <div class="left-btns">
+            <div class="home-btn-div navbar-icons-width">
+                <button class="home-btn" onclick="window.location.href='index.html'">
+                    <img class="anim-icon" src="images/buttons/home.gif" alt="Home Icon" />
+                    <span class="nav-txt">Home</span>
+                </button>
+            </div>
+
+            <!-- DROPDOWN: Help -->
+            <div class="nav-item dropdown navbar-icons-width">
+                <div class="dropdown-trigger">
+                    <img class="anim-icon" src="images/buttons/faq.gif" alt="Help Icon" />
+                    <span class="nav-txt">Help ▾</span>
+                </div>
+                <div class="dropdown-content">
+                    <a class="nav-txt" href="faq.html">FAQ</a>
+                    <a class="nav-txt" href="contact.html">Contact Us</a>
+                </div>
+            </div>
+
+            <!-- DROPDOWN: Bouquets -->
+            <div class="nav-item dropdown navbar-icons-width">
+                <div class="dropdown-trigger">
+                    <img class="anim-icon" src="images/logos/logo-flower.png" alt="Bouquets Icon" />
+                    <span class="nav-txt">Bouquets ▾</span>
+                </div>
+                <div class="dropdown-content">
+                    <a class="nav-txt" href="products.html">Pre-built</a>
+                    <a class="nav-txt" href="customize.html">Customize</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- CENTER LOGO -->
+        <div class="logo-btn-div">
+            <button class="logo-btn" onclick="window.location.href='index.html'">
+                <img class="nav-logo-img" src="images/logos/main-logo.png" alt="Home Logo Button" />
+            </button>
+        </div>
+
+        <!-- Right Navbar Buttons -->
+        <div class="right-btns">
+            <div class="login-btn-div navbar-icons-width">
+                <button class="auth-link" onclick="window.location.href='login.html'">
+                    <img class="anim-icon" src="images/buttons/signup.gif" alt="Sign Up Icon" />
+                    <span class="nav-txt">Sign Up / Log In</span>
+                </button>
+            </div>
+
+            <div class="cart-btn-div navbar-icons-width">
+                <button class="cart-button" class="cart-link">
+                    <img class="anim-icon" src="images/buttons/cart.gif" />
+                    <span class="nav-txt cart-count">0</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- END OF NAVBAR STUFF - COPY TILL HERE -->
+
+    <!-- Everything in the interface -->
+    <div class="room-container">
+        <!-- Lighting -->
+        <div class="light sub-container">
+            <button class="light-left left-btn same-btn"><img alt="Arrow Button" class="btn-img"
+                    src="images/buttons/arrow.png"></button>
+            <div class="waste1"></div>
+            <div class="lamp-img-div obj-img-div">
+                <img class="lamp-img img-object" src="images/lights/white-lamp.png" alt="Light Goes here">
+            </div>
+            <div class="waste2"></div>
+            <button class="light-right right-btn same-btn"><img alt="Arrow Button" class="btn-img"
+                    src="images/buttons/arrow.png"></button>
+        </div>
+
+        <!-- Bouquet -->
+        <div class="bouquet sub-container">
+            <button class="bouquet-left left-btn same-btn"><img alt="Arrow Button" class="btn-img"
+                    src="images/buttons/arrow.png"></button>
+            <div class="waste1"></div>
+
+            <div class="bouquet-img-div obj-img-div">
+                <img class="bouquet-img img-object" src="images/bouquets/b1.png" alt="Bouquet Goes here">
+            </div>c
+
+            <div class="waste2"></div>
+            <button class="bouquet-right right-btn same-btn"><img alt="Arrow Button" class="btn-img"
+                    src="images/buttons/arrow.png"></button>
+        </div>
+
+        <!-- Table -->
+        <div class="table sub-container">
+            <button class="table-left left-btn same-btn"><img alt="Arrow Button" class="btn-img"
+                    src="images/buttons/arrow.png"></button>
+            <button class="checkout-btn cart-btn">
+                <img alt="Checkout Button" class="cart-img" src="images/buttons/checkout.png">
+                <span>CHECK OUT</span>
+            </button>
+            <div class="table-img-div obj-img-div">
+                <img class="table-img img-object" src="images/tables/table2.png" alt="Table Goes here">
+            </div>
+            <button class="addtocart-btn cart-btn">
+                <img alt="Add to Cart Button" class="cart-img" src="images/buttons/add-to-cart.png">
+                <span>ADD TO CART</span>
+            </button>
+            <button class="table-right right-btn same-btn"><img alt="Arrow Button" class="btn-img"
+                    src="images/buttons/arrow.png"></button>
+        </div>
+    </div>
+
+    <!-- TUTORIAL POPUP -->
+    <div id="tutorial-overlay">
+        <!-- Caption next to the top-left arrow (no arrow character here) -->
+        <div class="tutorial-caption left-caption-1">
+            ← Click for previous lighting effect
+        </div>
+        <!-- Caption next to the bottom-left arrow -->
+        <div class="tutorial-caption left-caption-2">
+            ← Click for previous flower bouquet
+        </div>
+
+        <div class="tutorial-caption left-caption-3">
+            ← Click for previous table design
+        </div>
+
+
+        <!-- Caption next to the top-right arrow -->
+        <div class="tutorial-caption right-caption-1">
+            Click to next lighting effect →
+        </div>
+        <!-- Caption next to the bottom-right arrow -->
+        <div class="tutorial-caption right-caption-2">
+            Click for next flower bouquet →
+        </div>
+        <div class="tutorial-caption right-caption-3">
+            Click for next table design →
+        </div>
+
+        <!-- Center box with “Click To Begin” button -->
+        <div class="tutorial-center-box">
+            <h2>Welcome to the look and feel environment</h2>
+            <button id="close-tutorial">Click To Begin</button>
+        </div>
+    </div>
+
+    <!--LOADING THE JS FILE at LAST
+    : This ensures the page structure is parsed before your script runs. -->
+    <script src="index.js"></script>
+    <script src="cart.js"></script>
+    <script>
+        const PRODUCTS = [
+            { name: 'Lava Love', price: 70, img: 'images/bouquets/b1.png' },
+            { name: 'Blushing Bride', price: 35, img: 'images/bouquets/b2.png' },
+            { name: 'Midnight Romance', price: 29, img: 'images/bouquets/b3.png' },
+            { name: 'Spring Harmony', price: 32, img: 'images/bouquets/b4.png' },
+            { name: 'Eternal Love', price: 35, img: 'images/bouquets/b5.png' },
+            { name: 'Morning Dew', price: 38, img: 'images/bouquets/b6.png' },
+            { name: 'Crimson Sunrise', price: 65, img: 'images/bouquets/b7.png' },
+            { name: 'Golden Blush', price: 25, img: 'images/bouquets/b8.png' },
+            { name: 'Twilight Whisper', price: 25, img: 'images/bouquets/b9.png' },
+            { name: 'Midnight Serenity', price: 35, img: 'images/bouquets/b10.png' },
+            { name: 'Royal Bloom', price: 45, img: 'images/bouquets/b11.png' },
+            { name: 'Radiant Duo', price: 48, img: 'images/bouquets/b12.png' },
+            { name: 'Sunny Petal', price: 23, img: 'images/bouquets/b13.png' },
+            { name: 'Ocean Dreams', price: 60, img: 'images/bouquets/b14.png' },
+            { name: 'Lavender Grace', price: 70, img: 'images/bouquets/b15.png' },
+            { name: 'Velvet Rose', price: 65, img: 'images/bouquets/b16.png' },
+            { name: 'Autumn Flame', price: 55, img: 'images/bouquets/b17.png' },
+            { name: 'Blushing Horizon', price: 30, img: 'images/bouquets/b18.png' },
+            { name: 'Hues of Heart', price: 15, img: 'images/bouquets/b19.png' },
+            { name: 'Blossomic Reds', price: 30, img: 'images/bouquets/b20.png' },
+            { name: 'Tulip Doves', price: 45, img: 'images/bouquets/b21.png' },
+            { name: 'Lavender & Doves', price: 47, img: 'images/bouquets/b22.png' },
+            { name: "B'day Blossoms", price: 45, img: 'images/bouquets/b23.png' },
+            { name: 'Everlasting Vows', price: 85, img: 'images/bouquets/b24.png' },
+            { name: 'Serene Tribute', price: 120, img: 'images/bouquets/b25.png' }
+        ];
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const overlay = document.getElementById('tutorial-overlay');
+            const closeBtn = document.getElementById('close-tutorial');
+
+            if (!overlay || !closeBtn) return;           // safety check
+
+            closeBtn.addEventListener('click', () => {
+                /* start fade-out */
+                overlay.style.opacity = '0';
+                overlay.style.pointerEvents = 'none';      // disable clicks once fading
+
+                /* remove the element after the CSS transition ends (1 000 ms) */
+                overlay.addEventListener('transitionend', () => overlay.remove(), { once: true });
+            });
+        });
+
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const addBtn = document.querySelector('.addtocart-btn');
+            const payBtn = document.querySelector('.checkout-btn');
+            const imgEl = document.querySelector('.bouquet-img');     // the image on table
+
+            if (!imgEl || !addBtn || !payBtn) return;
+
+            /* helper: find the product that matches the current <img src> */
+            function currentBouquet() {
+                const filename = imgEl.src.split('/').pop();
+                return PRODUCTS.find(p => p.img.endsWith(filename)) || null;
+            }
+
+            function push(goCheckout) {
+                const bq = currentBouquet();
+                if (!bq) return alert('Unknown bouquet – cannot add to cart.');
+
+                FlowerCart.addItem({ id: bq.img, name: bq.name, price: bq.price, img: bq.img });
+                if (goCheckout) window.location.href = 'checkout.html';
+            }
+
+            addBtn.addEventListener('click', () => push(false));
+            payBtn.addEventListener('click', () => push(true));
+        });
+
+
+    </script>
+</body>
+
+</html>

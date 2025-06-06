@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link id="tab-icon" rel="icon" type="image/gif" href="images/logos/yellow-onlyflower-logo.png">
+    <title>FloLab: Login | Sign-Up</title>
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+    <video id="bg-video" autoplay muted loop playsinline poster="images/wallpapers/wallpaper.png">
+        <source src="images/wallpapers/bg-video-2.mp4" type="video/mp4" />
+        <!-- Fallback text for very old browsers -->
+        Your browser doesn’t support HTML5 video.
+    </video>
+
+    <!-- NAVBAR CONTAINER PARENT GRID -->
+    <div class="navbar-links">
+
+        <!-- Left Navbar Buttons -->
+        <div class="left-btns">
+            <div class="home-btn-div navbar-icons-width">
+                <button class="home-btn" onclick="window.location.href='index.html'">
+                    <img class="anim-icon" src="images/buttons/home.gif" alt="Home Icon" />
+                    <span class="nav-txt">Home</span>
+                </button>
+            </div>
+
+            <!-- DROPDOWN: Help -->
+            <div class="nav-item dropdown navbar-icons-width">
+                <div class="dropdown-trigger">
+                    <img class="anim-icon" src="images/buttons/faq.gif" alt="Help Icon" />
+                    <span class="nav-txt">Help ▾</span>
+                </div>
+                <div class="dropdown-content">
+                    <a class="nav-txt" href="faq.html">FAQ</a>
+                    <a class="nav-txt" href="contact.html" style="cursor: not-allowed">Contact Us</a>
+                </div>
+            </div>
+
+            <!-- DROPDOWN: Bouquets -->
+            <div class="nav-item dropdown navbar-icons-width">
+                <div class="dropdown-trigger">
+                    <img class="anim-icon" src="images/logos/logo-flower.png" alt="Bouquets Icon" />
+                    <span class="nav-txt">Bouquets ▾</span>
+                </div>
+                <div class="dropdown-content">
+                    <a class="nav-txt" href="products.html">Pre-built</a>
+                    <a class="nav-txt" href="customize.html">Customize</a>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- CENTER LOGO -->
+        <div class="logo-btn-div">
+            <button class="logo-btn" onclick="window.location.href='index.html'">
+                <img class="nav-logo-img" src="images/logos/main-logo.png" alt="Home Logo Button">
+            </button>
+        </div>
+
+        <!-- Right Navbar Buttons -->
+        <div class="right-btns">
+            <div class="login-btn-div navbar-icons-width">
+                <button class="auth-link" style="cursor: not-allowed">
+                    <img class="anim-icon" style="cursor: not-allowed" src="images/buttons/about.gif" alt="About Us Icon" />
+                    <span class="nav-txt" style="cursor: not-allowed">About Us</span>
+                </button>
+            </div>
+
+            <div class="cart-btn-div navbar-icons-width">
+                <button class="cart-button" class="cart-link" style="cursor: pointer">
+                    <img style="cursor: pointer" class="anim-icon" src="images/buttons/cart.gif"/>
+                    <span style="cursor: pointer" class="nav-txt cart-count">0</span>
+                </button>
+            </div>
+
+        </div>
+
+    </div>
+    <!-- END OF NAVBAR STUFF - COPY TILL HERE -->
+
+    <div class="form-container">
+        <button class="login-selected select-btn">LOGIN</button>
+        <button class="signup-selected select-btn">SIGN-UP</button>
+
+        <!-- We will use JS to change the whole form 
+        element in the div with class = "current-form"
+        depending on the button active -->
+        <div class="current-form">
+
+        </div>
+
+    </div>
+
+    <!--LOADING THE JS FILE at LAST
+    : This ensures the page structure is parsed before your script runs. -->
+    <script src="index.js"></script>
+    <script src="cart.js"></script>
+</body>

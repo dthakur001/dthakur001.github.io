@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FloLab | FAQs</title>
+  <link id="tab-icon" rel="icon" type="image/gif" href="images/logos/yellow-onlyflower-logo.png">
+  <link rel="stylesheet" href="navbar.css">
+  <link rel="stylesheet" href="faq.css" />
+</head>
+
+<body>
+  <!-- NAVBAR GRID -->
+  <div class="navbar-links">
+
+    <!-- Left Navbar Buttons -->
+    <div class="left-btns">
+      <div class="home-btn-div navbar-icons-width">
+        <button class="home-btn" onclick="window.location.href='index.html'">
+          <img class="anim-icon" src="images/buttons/home.gif" alt="Home Icon" />
+          <span class="nav-txt">Home</span>
+        </button>
+      </div>
+
+      <!-- DROPDOWN: Help -->
+      <div class="nav-item dropdown navbar-icons-width">
+        <div class="dropdown-trigger">
+          <img class="anim-icon" src="images/buttons/faq.gif" alt="Help Icon" />
+          <span class="nav-txt">Help ▾</span>
+        </div>
+        <div class="dropdown-content">
+          <a class="nav-txt" href="faq.html">FAQ</a>
+          <a class="nav-txt" href="contact.html" style="cursor: not-allowed;">Contact Us</a>
+        </div>
+      </div>
+
+      <!-- DROPDOWN: Bouquets -->
+      <div class="nav-item dropdown navbar-icons-width">
+        <div class="dropdown-trigger">
+          <img class="anim-icon" src="images/logos/logo-flower.png" alt="Bouquets Icon" />
+          <span class="nav-txt">Bouquets ▾</span>
+        </div>
+        <div class="dropdown-content">
+          <a class="nav-txt" href="products.html">Pre-built</a>
+          <a class="nav-txt" href="customize.html">Customize</a>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- CENTER LOGO -->
+    <div class="logo-btn-div">
+      <button class="logo-btn" onclick="window.location.href='index.html'">
+        <img class="nav-logo-img" src="images/logos/main-logo.png" alt="Home Logo Button">
+      </button>
+    </div>
+
+    <!-- Right Navbar Buttons -->
+    <div class="right-btns">
+      <div class="login-btn-div navbar-icons-width">
+        <button class="auth-link" onclick="window.location.href='login.html'">
+          <img class="anim-icon" src="images/buttons/signup.gif" alt="Sign Up Icon" />
+          <span class="nav-txt">Sign Up / Log In</span>
+        </button>
+      </div>
+
+      <div class="cart-btn-div navbar-icons-width">
+        <button class="cart-button" class="cart-link">
+          <img class="anim-icon" src="images/buttons/cart.gif" />
+          <span class="nav-txt cart-count">0</span>
+        </button>
+      </div>
+
+    </div>
+
+  </div>
+  <!-- END OF NAVBAR STUFF - COPY TILL HERE -->
+
+  <!-- FAQ Header -->
+  <div class="faq-header">
+    <p class="faq-title">Frequently Asked Questions</p>
+  </div>
+
+  <!-- FAQ -->
+  <div class="faq-container">
+
+    <!-- Questions Category 1 -->
+    <div class="q-cat1 q-cat-same-style">
+      <button class="open-cat1 cat-btn">
+        <span class="cat-btn-txt">Delivery Timing<br>& Options</span>
+        <img class="finger-img" src="images/buttons/finger.png" alt="There ==>">
+      </button>
+    </div>
+
+    <!-- Questions Category 2 -->
+    <div class="q-cat2 q-cat-same-style">
+      <button class="open-cat2 cat-btn">
+        <span class="cat-btn-txt">Personalization<br>& Custom Orders</span>
+        <img class="finger-img" src="images/buttons/finger.png" alt="There ==>">
+      </button>
+    </div>
+
+    <!-- Questions Category 3 -->
+    <div class="q-cat3 q-cat-same-style">
+      <button class="open-cat3 cat-btn">
+        <span class="cat-btn-txt">Order Changes<br>& Refunds</span>
+        <img class="finger-img" src="images/buttons/finger.png" alt="There ==>">
+      </button>
+    </div>
+
+    <!-- Questions Category 4 -->
+    <div class="q-cat4 q-cat-same-style">
+      <button class="open-cat4 cat-btn">
+        <span class="cat-btn-txt">Flower Quality<br>& Care</span>
+        <img class="finger-img" src="images/buttons/finger.png" alt="There ==>">
+      </button>
+    </div>
+
+    <!-- Questions Category 5 -->
+    <div class="q-cat5 q-cat-same-style">
+      <button class="open-cat5 cat-btn">
+        <span class="cat-btn-txt">Visual-Preview<br>(“Look & Feel”) Tool</span>
+        <img class="finger-img" src="images/buttons/finger.png" alt="There ==>">
+      </button>
+    </div>
+
+    <!-- JS renders the questions in the div below -->
+    <div class="questions">
+
+    </div>
+
+  </div>
+
+  <!--LOADING THE JS FILE at LAST
+  : This ensures the page structure is parsed before your script runs. -->
+  <script src="faq.js"></script>
+  <script src="cart.js"></script>
+</body>
+
+</html>

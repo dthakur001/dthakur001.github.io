@@ -1,0 +1,165 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  width: 100vw;
+  /*background: url("images/wallpapers/wallpaper.png") center/cover no-repeat;*/
+  background-position: center/cover;
+  background-repeat: no-repeat;
+  overflow: clip;
+
+  position: relative;
+  /* Comment this property to make the homepage scrollable */
+}
+
+/* Style the full-screen video */
+#bg-video {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;       /* Crop/scale to cover viewport */
+  transform: translate(-50%, -50%);
+  z-index: -1;             /* Send it behind all content */
+}
+/* ################################# */
+/* FORM CONTAINER STYLES */
+
+.form-container {
+  z-index: 1;
+  margin: 3rem auto; /* This centers the form container on the webpage. */
+  overflow: clip;
+
+  height: 70vh;
+  width: auto;
+  max-width: 75vw;
+  max-height: 70vh;
+  gap: 0.10rem 0.10rem;
+
+  border-radius: 1.5rem;
+  
+  display: grid;
+  grid-template-areas:
+  "a a a a b b b b"
+  "a a a a b b b b"
+  "c c c c c c c c"
+  "c c c c c c c c"
+  "c c c c c c c c"
+  "c c c c c c c c"
+  "c c c c c c c c"
+  "c c c c c c c c";
+}
+
+.select-btn {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.login-selected {
+  grid-area: a;
+  border-radius: 1.50rem 0 0 0;
+
+  /* Below FOUR props are changed through JS when button is Un-selected */
+  border: 0.25rem solid black;
+  background: black;
+  color: white;
+  cursor: not-allowed;
+}
+
+.signup-selected {
+  grid-area: b;
+  border-radius: 0 1.5rem 0 0;
+
+  /* Below FOUR props are changed through JS when button is Selected */
+  border: 0.25rem solid white;
+  background: white;
+  color: black;
+  cursor: pointer;
+}
+
+.current-form {
+  grid-area: c;
+  place-items: center;
+  justify-items: center;
+  border: 0.25rem solid black;
+  border-radius: 0 0 1.5rem 1.5rem;
+  background: rgba(119, 136, 153, 0.6);
+}
+
+.both-forms{
+  width: 80%;
+  margin: 3rem auto;
+
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  justify-content: center;
+}
+
+/* make each label+input line up */
+.form-group {
+  display: flex;
+  flex-direction: row;
+  place-content: center;
+
+  height: 100%;
+  width: 100%;
+
+  margin-top: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.form-group label {
+  width: 20%;
+  align-self: center;
+}
+.form-group input {
+  align-self: center;
+  width: 60%;
+  height: 2rem;
+  border: 0.2rem solid black;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+}
+.form-group input:focus {
+  outline: none;
+  box-shadow: none;
+  border: 0.2rem solid rgb(255, 0, 0);
+  border-radius: 0.25rem;
+  box-shadow: 0 0 0 3px rgba(255, 0, 0, 0.655);
+  
+}
+
+/* Style SUBMIT button */
+.current-form button {
+  width: 80%; /* Total width of label + input */
+  height: 3rem;
+  border: 0.2rem solid black;
+  border-radius: 0.25rem;
+  margin-top: 2.5rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.current-form button:hover {
+  background-color: black;
+  border: 0.2rem solid white;
+  color:white;
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+/* center the “forgot password” link below the form and push it down */
+.password-forgot {
+  display: block;
+  margin: auto; /* Centers the text item */
+  width: 20%;
+  text-align: center;
+  color: #f0f0f0;
+  text-decoration: none;
+}
+.password-forgot:hover {
+  text-decoration: underline;
+  transform: scale(1.05);
+}

@@ -1,0 +1,440 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(135deg,
+            #ede7f6 0%,
+            #d1c4e9 50%,
+            #fafaff 100%);
+    overflow: clip;
+}
+
+/* ################################# */
+
+/* ################################# */
+/* Styles for the custom tool */
+
+.tool {
+    margin: auto;
+    margin-top: 0.15rem;
+    padding: 0.10rem 0.10rem;
+    height: 85vh;
+    width: 98vw;
+    /*border: 2px solid violet;*/
+
+    display: flex;
+    flex-direction: row;
+    column-gap: 0.15rem;
+}
+
+/* ################################# */
+/* Makes the <div> for vases & Flowers scrollable */
+.scroll {
+    display: grid;
+    grid-template-areas:
+        "a"
+        "b"
+        "b"
+        "b"
+        "b"
+        "b"
+        "b";
+    place-items: center;
+
+    height: 97.25%;
+    width: 25%;
+    border: 0.25rem solid rgba(159, 0, 0, 0.50);
+    border-radius: 1.5rem;
+    overflow: clip;
+}
+
+.scroll-list {
+    grid-area: b;
+    height: 100%;
+    width: 100%;
+    justify-self: center;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    scrollbar-color: #ff5e01 #000;
+    scrollbar-width: auto;
+}
+
+.vase-card {
+    height: 30%;
+    width: 98%;
+
+    display: grid;
+    grid-template-areas: "a a a b";
+}
+
+.vase-img {
+    grid-area: a;
+    height: calc(100vh * 0.2);
+    width: auto;
+    justify-self: center;
+    align-self: center;
+}
+
+.pot-add-btn {
+    grid-area: b;
+    height: calc(100vh * 0.16);
+    width: fit-content;
+    justify-self: end;
+    align-self: center;
+}
+
+.flower-card {
+    height: fit-content;
+    width: 98%;
+
+    display: grid;
+    grid-template-areas:
+        "a a b b"
+        "c c b b";
+    place-items: center;
+    row-gap: 5px;
+    overflow: clip;
+}
+
+.flower-add-btn {
+    grid-area: a;
+    height: 85%;
+    width: auto;
+    align-self: end;
+}
+
+.flower-img {
+    grid-area: b;
+    align-self: start;
+    height: 175px;
+    width: auto;
+}
+
+.flower-minus-btn {
+    grid-area: c;
+    height: 85%;
+    width: auto;
+    align-self: start;
+}
+
+/* Common Styles for scrollable pots & flowers */
+
+.same-btn {
+    background: linear-gradient(to bottom, #fafafa 0%, #eaeaea 100%);
+
+    border: none;
+    border-radius: 5rem;
+
+    box-shadow:
+        0 2px 4px rgba(0, 0, 0, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8);
+
+    overflow: hidden;
+
+    cursor: pointer;
+    transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+.same-btn:hover {
+    box-shadow:
+        0 4px 8px rgba(0, 0, 0, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8);
+    transform: translateY(-1px);
+}
+
+/* Active (pressed): push the button down */
+.same-btn:active {
+    box-shadow:
+        0 1px 3px rgba(0, 0, 0, 0.12) inset,
+        0 1px 2px rgba(0, 0, 0, 0.1);
+    transform: translateY(1px);
+}
+
+/* Focus outline for keyboard accessibility */
+.same-btn:focus {
+    outline: 2px solid #2c03fc;
+    outline-offset: 2px;
+}
+
+.item-hover:hover {
+    transform: scale(1.05);
+}
+
+.scroll-title {
+    grid-area: a;
+    margin: auto;
+    padding: 4px 0 4px 0;
+    width: 100%;
+    color: #2c03fc;
+    font-size: 1.25rem;
+    font-weight: 600;
+    text-align: center;
+    border-bottom: 0.25rem solid rgba(159, 0, 0, 0.50);
+}
+
+.scroll-btn-img {
+    height: 40px;
+    width: auto;
+}
+
+.selected-vase {
+    background: #9b9b9b;
+    transition: none !important;
+}
+
+.selected-vase:hover {
+    transform: none !important;
+    box-shadow: none !important;
+    filter: none !important;
+    cursor: not-allowed;
+}
+
+/* ################################# */
+/* Specific Styles for customize Tool */
+
+/* Styles for the middle tool screen */
+.tool-screen {
+    height: 97.5%;
+    width: 66%;
+    row-gap: 0.15rem;
+    border-radius: 1.5rem;
+    overflow: clip;
+
+    display: grid;
+    grid-template-areas:
+        "a a a a"
+        "a a a a"
+        "a a a a"
+        "a a a a"
+        "a a a a"
+        "b b b b"
+        "b b b b"
+        "c c c c";
+}
+
+.flowers-div {
+    grid-area: a;
+    height: 100%;
+    width: 100%;
+}
+
+.vase-div {
+    grid-area: b;
+    align-self: end;
+    min-height: 100%;
+    height: fit-content;
+    max-height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-areas: "a a b b b b c c";
+    place-items: center;
+}
+
+.counter-div {
+    grid-area: c;
+    font-size: 1.25rem;
+    font-weight: 600;
+    height: fit-content;
+    width: 80%;
+    text-align: center;
+    align-self: center;
+    justify-self: center;
+}
+
+/* Styles for the Flower Selection */
+
+.flower-container {
+    height: 30%;
+    /* Flower bouquet binder height */
+    width: 25%;
+    /* Flower bouquet binder width */
+    margin: 0 auto;
+    position: relative;
+    z-index: 998;
+    /* This should be 998 when the interface is ready */
+    /* border: 2px solid #000; */
+    top: calc(100vh * 0.45);
+    overflow: visible;
+}
+
+.tool-flower-img {
+    height: calc(100vh * 0.3);
+    transform: translateX(-50%);
+    transform-origin: bottom;
+    z-index: 999;
+}
+
+/* Styles for the Vase Selection */
+
+.checkout-btn {
+    grid-area: a;
+    justify-self: start;
+    align-self: start;
+    margin-left: 10%;
+}
+
+.addtocart-btn {
+    grid-area: c;
+    justify-self: end;
+    align-self: start;
+    margin-right: 10%;
+}
+
+.cart-img {
+    height: 50px;
+    width: 50px;
+    clip-path: circle(50%);
+}
+
+.cart-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 7rem;
+    width: 7rem;
+
+    background: #FFEBEB;
+    font-weight: 600;
+    font-size: 1rem;
+
+    border: none;
+    border-radius: 0.35rem;
+}
+
+.cart-btn:hover {
+    transform: scale(1.05);
+    color: whitesmoke;
+    background: black;
+    border: 0.05rem solid whitesmoke;
+}
+
+.tool-vase-img-div {
+    grid-area: b;
+    align-self: end;
+
+    height: fit-content;
+    width: fit-content;
+    /* background: rgba(255, 255, 255, 0.6); */
+    display: grid;
+    grid-template-areas:
+        "a"
+        "a"
+        "a";
+    align-content: start;
+}
+
+.tool-vase-img {
+    grid-area: a;
+    height: calc(100vh * 0.3);
+    position: relative;
+    z-index: 999;
+    /* Change this to 999 once complete */
+}
+
+/* ################################# */
+
+/* OVERLAY POPUP STYLES */
+
+#tutorial-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 999;
+    pointer-events: auto;
+    transition: opacity 1s ease-out;
+}
+
+
+.left-btn,
+.right-btn {
+    position: relative;
+    z-index: 1002;
+}
+
+/*Center Box*/
+.tutorial-center-box {
+    position: absolute;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+    background: #ffffff;
+    padding: 1.25rem 1.75rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    max-width: 25rem;
+    box-shadow: 0 0.375rem 1.25rem rgba(0, 0, 0, 0.2);
+    font-family: Arial, sans-serif;
+    color: #333333;
+    z-index: 1001;
+}
+
+.tutorial-center-box h2 {
+    margin: 0 0 1rem 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.tutorial-center-box button {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    background: #4CAF50;
+    color: #ffffff;
+    border: none;
+    border-radius: 0.375rem;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.tutorial-center-box button:hover {
+    background: #45A049;
+}
+
+
+/*Captions Next To Buttons */
+.tutorial-caption {
+    position: absolute;
+    background: #ffffff;
+    color: #222222;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.375rem;
+    font-size: 0.95rem;
+    line-height: 1.3;
+    text-align: left;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.15);
+    max-width: 10rem;
+    z-index: 1000;
+}
+
+.left-caption-1 {
+    top: 32vh;
+    left: 22vw;
+    transform: translateY(-50%);
+}
+
+.left-caption-2 {
+    top: 56vh;
+    left: 22vw;
+    transform: translateY(-50%);
+}
+
+.right-caption-1 {
+    top: 28vh;
+    right: 22vw;
+    transform: translateY(-50%);
+}
+
+
+.right-caption-2 {
+    top: 38vh;
+    right: 22vw;
+    transform: translateY(-50%);
+}

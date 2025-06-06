@@ -1,0 +1,242 @@
+/* BACKGROUND */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  width: 100vw;
+  background: url(images/wallpapers/landing-bg.png) center/cover no-repeat;
+  overflow: clip;
+  /* Comment this property to make the homepage scrollable */
+}
+
+/* PRODUCT SECTION */
+.product-section {
+  height: 80vh;
+  width: 80vw;
+  margin: 20px auto;
+
+  display: grid;
+  grid-template-areas:
+    "a a a c c c e e e e"
+    "a a a c c c e e e e"
+    "b b b c c c e e e e"
+    "b b b c c c e e e e"
+    "g g g d d d f f f f"
+    "g g g d d d f f f f";
+  gap: 5px 5px;
+}
+
+.b-same {
+  /* border: 2px solid whitesmoke; *//* Uncomment this if You want to see the grid */ 
+  height: 100%;
+  width: 100%;
+}
+
+/* TITLE SECTION */
+.b-title {
+  grid-area: a;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.bouquet-name {
+  font-weight: bold;
+  font-family: Copperplate, Papyrus, fantasy, Arial, sans-serif;
+  color: #fbe9d0;
+  font-size: 3rem;
+}
+
+/* DESCRIPTION SECTION */
+.b-description {
+  grid-area: b;
+  font-size: 1.5rem;
+  line-height: 1.6;
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: start;
+
+  row-gap: 2rem;
+
+}
+
+.bouquet-description {
+  text-align: center;
+  color: #fbe9d0;
+}
+
+/* MORE BOUQUETS Button styles */
+.back-btn-div {
+  grid-area: g;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.same-btn {
+  height: 3.5rem;
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+  background-color: #fbd4ff;
+  justify-content: space-evenly;
+  align-items: center;
+  
+  color: #222;
+  border-radius: 2rem;
+  border: none;
+
+  outline: 2px solid transparent;
+  outline-offset: -1;
+
+
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.back-btn-img, .btn-img {
+  height: 50px;
+  width: auto;
+}
+
+.more-products {
+  margin-left: 5px;
+}
+
+.same-btn:hover {
+  background-color: #e6b9f0;
+  outline: 2px solid #ff5e01;
+  transform: scale(1.05);
+}
+
+/* TAGS SECTION */
+.bouquet-tags {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.tag-title {
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: #fbe9d0;
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.tag-list span {
+  background-color: #874f41;
+  color: white;
+  padding: 6px 12px;
+  margin-right: 10px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+
+/* IMAGE SECTION */
+.b-img {
+  grid-area: c;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.bouquet-image {
+  width: 25vw;
+  height: auto;
+}
+
+/* PRICE SECTION */
+.b-price {
+  grid-area: d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.price-text {
+  font-size: 30px;
+  font-weight: bold;
+  color: #fbe9d0;
+  border-bottom: 3px solid #fbe9d0;
+}
+
+/* TRY IT OUT SECTION */
+.b-try {
+  grid-area: e;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.try-btn {
+  height: 50%;
+  width: 80%;
+  font-size: 0.75rem;
+  font-weight: bold;
+  line-height: 1.5;
+  color: #fbd4ff;
+
+  background-color: #222;
+  border: none;
+  outline: 2px solid transparent;
+  outline-offset: -1;
+  border-radius: 3rem;
+  cursor: pointer;
+
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+  align-items: center;
+  justify-content: center;
+}
+
+.try-btn:hover {
+  transform: scale(1.05);
+  outline: 2px solid #ff5e01;
+}
+
+.tryout-gif {
+  width: 5vw;
+  height: auto;
+  object-fit: contain;
+  clip-path: circle(50%);
+}
+
+/* ORDER BUTTON SECTION */
+.b-buy {
+  grid-area: f;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  row-gap: 10px;
+}
+
+.order-btn, .addtocart-btn {
+  font-size: 14px;
+  width: 100%;
+  align-items: center;
+}

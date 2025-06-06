@@ -1,0 +1,422 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    overflow: clip;
+    /* Comment this property to make the homepage scrollable */
+}
+/* ################################# */
+.top-link-container {
+    position: absolute;
+    display: grid;
+
+    left: 0.5%;
+    z-index: 999;
+
+    grid-template-areas:
+    "a a a a a a a"
+    "a a a a a a a"
+    "a a a a a a a"
+    "b b b c c c c"
+    "d d d e e e e"
+    "d d d f f f f";
+    
+    gap: 5px 6px;
+}
+
+.top-link-container a:hover {
+    scale: (1.05);
+}
+/* Logo Styling */
+.logo-link {
+    grid-area: a;
+}
+.home-link {
+    grid-area: b;
+    justify-self: end;
+    align-self: center;
+}
+.signup-link{
+    grid-area: d;
+}
+.home-text {
+    grid-area: c;
+}
+.login-text {
+    grid-area: e;
+    align-self: end;
+}
+.signup-text {
+    grid-area: f;
+    align-self: start;
+}
+
+.logo-img {
+    height: 150px;
+    width: 150px;
+    align-self: start;
+    transition: transform 0.2s ease;
+}
+
+.logo-img:hover {
+    transform: scale(1.05);
+}
+/* ################################# */
+
+/* ################################# */
+/* Styles for Category Containers */
+.slanted-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-auto-rows: 20vw;
+    gap: 5px 5px;
+
+    position: absolute;
+    left: 5%;
+    top: -28%;
+    /* Remove the -ve sign to move the whole thing down to see the corners */
+
+    width: 170vh;
+    height: 80vw;
+
+    overflow: clip;
+    transform-origin: center;
+    transform: rotate(-70deg);
+}
+
+.slanted-box {
+    height: auto;
+    overflow: hidden;
+    background: lightgray;
+}
+
+.slanted-box img {
+    object-fit: cover;
+    display: block;
+}
+
+/* Positioning each slanted div within Grid */
+.slanted-box:nth-child(1) {
+    /* Spring Special */
+    grid-column: 4 / span 3;
+    grid-row: 1;
+}
+
+.slanted-box:nth-child(2) {
+    /* Wedding */
+    grid-column: 1 / span 3;
+    grid-row: 1;
+}
+
+.slanted-box:nth-child(4) {
+    /* Best Sellers */
+    grid-column: 5 / span 3;
+    grid-row: 2;
+}
+
+.slanted-box:nth-child(5) {
+    /* Romance */
+    grid-column: 1 / span 4;
+    grid-row: 2;
+}
+
+.slanted-box:nth-child(6) {
+    /* Birthday */
+    grid-column: 4 / span 4;
+    grid-row: 3;
+}
+
+.slanted-box:nth-child(7) {
+    /* Customize */
+    grid-column: 1 / span 3;
+    grid-row: 3;
+}
+
+.slanted-box:nth-child(8) {
+    /* Sale 20% Off! */
+    grid-column: 5 / span 3;
+    grid-row: 4;
+}
+
+.slanted-box:nth-child(9) {
+    /* Sympathy */
+    grid-column: 2 / span 3;
+    grid-row: 4;
+}
+
+/* Spring Category Image Style */
+.spring-img {
+    position: relative;
+    left: -2%;
+    top: -2%;
+    height: 45vh;
+    max-width: auto;
+    transform-origin: center;
+    /* to rotate from the center */
+    transform: rotate(87deg);
+}
+
+.cake-img {
+    position: relative;
+    top: -10%;
+    left: -2.75%;
+    height: 65vh;
+    max-width: auto;
+    transform-origin: center;
+    transform: rotate(70deg);
+}
+
+.wedding-img {
+    position: relative;
+    left: 15%;
+    height: 55vh;
+    max-width: auto;
+    transform-origin: center;
+    transform: rotate(67deg);
+}
+
+.bunch-img {
+    position: relative;
+    left: -20%;
+    top: -4%;
+    height: 55vh;
+    max-width: auto;
+    transform-origin: center;
+    transform: rotate(70deg);
+}
+
+.romance-img {
+    position: relative;
+    left: 25%;
+    top: -5%;
+    height: 70vh;
+    max-width: auto;
+    transform-origin: center;
+    transform: rotate(75deg);
+}
+
+.customize-img {
+    position: relative;
+    left: 42%;
+    top: 10%;
+    height: 30vh;
+    max-width: auto;
+    transform-origin: center;
+    transform: rotate(120deg);
+}
+
+.discount-img {
+    position: relative;
+    left: -15%;
+    top: -15%;
+    height: 70vh;
+    max-width: auto;
+    transform-origin: center;
+    transform: rotate(70deg);
+}
+
+.sympathy-img {
+    position: relative;
+    left: 25%;
+    top: -15%;
+    height: 55vh;
+    max-width: auto;
+    transform-origin: center;
+    transform: rotate(70deg);
+}
+
+/* ################################# */
+
+/* ################################# */
+/* BUTTON STYLES */
+.transparent-btn {
+    /* Shared Styles */
+    position: relative;
+    padding: 0;
+    border: 0.2rem solid rgb(255, 255, 255);
+    border-radius: 0.4rem;
+    /* 0.5 = 50% opacity */
+    width: 17.5vw;
+    height: 6vh;
+    transform: rotate(70deg);
+    color: #000;
+    font-size: 1.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.transparent-btn:hover {
+    background-color: whitesmoke;
+    border: 0.2rem solid rgba(0, 0, 0);
+}
+
+.spring-btn {
+    left: -11%;
+    top: -70%;
+    background-color: rgba(224, 187, 181, 0.5);
+}
+
+.wedding-btn {
+    left: 63%;
+    top: -99%;
+    background-color: rgba(193, 121, 233, 0.5);
+}
+
+.bunch-btn {
+    left: -11%;
+    top: -95%;
+    background-color: rgba(148, 218, 235, 0.5);
+}
+
+.romance-btn {
+    left: 72.5%;
+    top: -137%;
+    background-color: rgba(208, 44, 46, 0.5);
+}
+
+.birthday-btn {
+    left: -8%;
+    top: -122%;
+    background-color: rgba(226, 170, 126, 0.5);
+}
+
+.custom-btn {
+    left: 62.5%;
+    top: -37%;
+    background-color: rgba(250,217,58,0.5);
+}
+
+.discount-btn {
+    left: -8.5%;
+    top: -135%;
+    background-color: rgba(192, 157, 118, 0.8);
+}
+
+.sympathy-btn {
+    left: 62.75%;
+    top: -100%;
+    background-color: rgba(222,200,190,0.5);
+}
+
+/* Some adjustments is screen viewports differ */
+@media screen and (max-width: 90rem) {
+    .transparent-btn {
+        width: 16vw;
+    }
+
+    .spring-btn {
+        left: -8%;
+        top: -80%;
+    }
+
+    .wedding-btn {
+        left: 66.5%;
+        top: -108%;
+    }
+
+    .bunch-btn {
+        left: -8%;
+        top: -110%;
+    }
+
+    .romance-btn {
+        left: 75%;
+        top: -152%;
+    }
+
+    .birthday-btn {
+        left: -6%;
+        top: -137%;
+    }
+
+    .custom-btn {
+        left: 66.5%;
+        top: -40%;
+    }
+
+    .discount-btn {
+        left: -8%;
+        top: -150%;
+    }
+
+    .sympathy-btn {
+        left: 67%;
+        top: -110%;
+    }
+}
+
+
+/* ################################# */
+
+/* ################################# */
+/* Bottom Corner Link Buttons */
+.bottom-link-container {
+    position: absolute;
+    right: 0.50%;
+    bottom: 2%;
+    display: grid;
+
+    grid-template-areas: 
+    "a a b b b"
+    "c c d d d"
+    "e e f f f"
+    "g g h h h";
+    place-items: center;
+    gap: 5px 5px;
+}
+
+.faq-link {
+    grid-area: a;
+}
+.contact-link {
+    grid-area: c;
+}
+.about-link {
+    grid-area: e;
+}
+.review-link {
+    grid-area: g;
+}
+
+.faq-text {
+    grid-area: b;
+}
+.contact-text {
+    grid-area: d;
+}
+.about-text {
+    grid-area: f;
+}
+.review-text {
+    grid-area: h;
+}
+
+/* COMMON STYLES AMONG ALL TOP/BOTTOM CONTAINER LINKS*/
+.same-link {
+    justify-self: end;
+    align-self: center;
+}
+.same-txt {
+    text-decoration: none;
+    font-size: larger;
+    font-weight: bolder;
+    color: whitesmoke;
+    justify-self: start;
+    align-self: center;
+}
+.same-txt:hover{
+    transform: scale(1.05);
+}
+.same-btn {
+    height: 40px;
+    width: 40px;
+    clip-path: circle(50%);
+}
+.same-btn:hover {
+    transform: scale(1.05);
+}
+/* ################################# */

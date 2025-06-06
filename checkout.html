@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FloLab | Checkout</title>
+    <link id="tab-icon" rel="icon" type="image/gif" href="images/logos/yellow-onlyflower-logo.png">
+    <link rel="stylesheet" href="navbar.css" />
+    <link rel="stylesheet" href="checkout.css" />
+</head>
+
+<body>
+    <!-- NAVBAR GRID -->
+    <div class="navbar-links">
+
+        <!-- Left Navbar Buttons -->
+        <div class="left-btns">
+            <div class="home-btn-div navbar-icons-width">
+                <button class="home-btn" onclick="window.location.href='index.html'">
+                    <img class="anim-icon" src="images/buttons/home.gif" alt="Home Icon" />
+                    <span class="nav-txt">Home</span>
+                </button>
+            </div>
+
+            <!-- DROPDOWN: Help -->
+            <div class="nav-item dropdown navbar-icons-width">
+                <div class="dropdown-trigger">
+                    <img class="anim-icon" src="images/buttons/faq.gif" alt="Help Icon" />
+                    <span class="nav-txt">Help ▾</span>
+                </div>
+                <div class="dropdown-content">
+                    <a class="nav-txt" href="faq.html">FAQ</a>
+                    <a class="nav-txt contact-link" href="contact.html" style="cursor: not-allowed">Contact Us</a>
+                </div>
+            </div>
+
+            <!-- DROPDOWN: Bouquets -->
+            <div class="nav-item dropdown navbar-icons-width">
+                <div class="dropdown-trigger">
+                    <img class="anim-icon" src="images/logos/logo-flower.png" alt="Bouquets Icon" />
+                    <span class="nav-txt">Bouquets ▾</span>
+                </div>
+                <div class="dropdown-content">
+                    <a class="nav-txt" href="products.html">Pre-built</a>
+                    <a class="nav-txt" href="customize.html">Customize</a>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- CENTER LOGO -->
+        <div class="logo-btn-div">
+            <button class="logo-btn" onclick="window.location.href='index.html'">
+                <img class="nav-logo-img" src="images/logos/main-logo.png" alt="Home Logo Button">
+            </button>
+        </div>
+
+        <!-- Right Navbar Buttons -->
+        <div class="right-btns">
+            <div class="login-btn-div navbar-icons-width">
+                <button class="auth-link" onclick="window.location.href='login.html'">
+                    <img class="anim-icon" src="images/buttons/signup.gif" alt="Sign Up Icon" />
+                    <span class="nav-txt">Sign Up / Log In</span>
+                </button>
+            </div>
+
+        </div>
+
+    </div>
+    <!-- END OF NAVBAR STUFF - COPY TILL HERE -->
+
+    <!-- ============== Forms SECTION ============== -->
+    <div class="forms-container">
+
+        <!-- Receiver form -->
+        <div class="rcv-details same-grid-cell">
+            <div class="radio-btn-1 same-area-style">
+                <input id="receiver-radio" name="delivery" type="radio" class="radio-input-other select-btn" checked />
+                <label for="delivery">Deliver it ELSEWHERE?</label>
+            </div>
+
+            <div class="radio-btn-2 same-area-style">
+                <input id="self-radio" name="delivery" type="radio" class="radio-input-self select-btn" />
+                <label for="delivery">Deliver it to YOURSELF</label>
+            </div>
+
+            <div class="recv-form-div">
+                <form action="" method="get" class="recv-form">
+                    <!-- Prefix Select -->
+                    <div class="input-prefix input-div">
+                        <label>Prefix</label>
+                        <select class="hoverEffect" required>
+                            <option value="">Pick one</option>
+                            <option value="Mr.">Mr.</option>
+                            <option value="Ms.">Ms.</option>
+                            <option value="Mrs.">Mrs.</option>
+                            <option value="Jr.">Jr.</option>
+                            <option value="Sir">Sir</option>
+                            <option value="Madam">Mam</option>
+                        </select>
+                    </div>
+
+                    <!-- First Name -->
+                    <div class="input-first-name input-div">
+                        <label for="fname">First Name </label>
+                        <input type="text" name="fname" class="f-name input-container"
+                            placeholder="Enter first name here..." required />
+                    </div>
+
+                    <!-- mid Name -->
+                    <div class="input-mid-name input-div">
+                        <label for="mname">Middle Name </label>
+                        <input type="text" name="mname" class="f-name input-container"
+                            placeholder="Mid-name is optional" />
+                    </div>
+
+                    <!-- Last Name -->
+                    <div class="input-last-name input-div">
+                        <label for="lname">Last Name </label>
+                        <input type="text" name="lname" class="l-name input-container"
+                            placeholder="Enter last name here..." required />
+                    </div>
+
+                    <!-- Phone -->
+                    <div class="input-phone input-div">
+                        <label for="phone">Phone </label>
+                        <input type="number" name="phone" class="p-num input-container"
+                            placeholder="Enter 10 digits only..." required />
+                    </div>
+
+                    <!-- Email -->
+                    <div class="input-email input-div">
+                        <label for="email">Email </label>
+                        <input type="email" name="email" class="email-input input-container"
+                            placeholder="Enter your email here..." required />
+                    </div>
+
+                    <!-- Delivery Date Required -->
+                    <div class="input-del-date input-div">
+                        <label for="d-date">Preferred Delivery Date</label>
+                        <input type="date" name="d-date" class="email-input input-container"
+                            placeholder="When do want this delivered?.." required />
+                    </div>
+
+                    <!-- Apartment/Unit -->
+                    <div class="input-unit input-div">
+                        <label for="unit">Apt./Unit # </label>
+                        <input type="number" name="unit" class="unit-input input-container"
+                            placeholder="Unit # (optional)" />
+                    </div>
+
+                    <!-- Street # & Name -->
+                    <div class="input-street input-div">
+                        <label for="street">Street Number & Name</label>
+                        <input type="text" name="street" class="street-input input-container"
+                            placeholder="Enter Street info here..." required />
+                    </div>
+
+                    <!-- City -->
+                    <div class="input-city input-div">
+                        <label for="city">City</label>
+                        <input type="text" name="city" class="city-input input-container"
+                            placeholder="Enter city here..." required />
+                    </div>
+
+                    <!-- Province -->
+                    <div class="input-province input-div">
+                        <label for="province">Province </label>
+                        <select class="hoverEffect" id="province-select" required>
+                            <option value="">select province</option>
+                            <option value="MANITOBA">MANITOBA</option>
+                            <option value="QUEBEC">QUEBEC</option>
+                            <option value="SASKATCHEWAN">SASKATCHEWAN</option>
+                            <option value="ONTARIO">ONTARIO</option>
+                            <option value="BRITISH COLOMBIA">BRITISH COLOMBIA</option>
+                            <option value="ALBERTA">ALBERTA</option>
+                            <option value="NOVA SCOTIA">NOVA SCOTIA</option>
+                            <option value="NUNAVUT">NUNAVUT</option>
+                            <option value="YUKON">YUKON</option>
+                        </select>
+                    </div>
+
+                    <!-- Postal Code -->
+                    <div class="input-postal input-div">
+                        <label for="postal">Postal Code</label>
+                        <input type="text" name="postal" class="postal-input input-container"
+                            placeholder="Enter postal code here..." required />
+                    </div>
+
+                    <div class="msg-div input-div">
+                        <label for="gift-msg">Type message for receiver, if any </label>
+                        <textarea class="msg-box" placeholder="Type your message in 55 characters" maxlength="55" rows="1"></textarea>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Payment form -->
+        <div class="pmt-form same-grid-cell">
+
+            <h2 class="payment-title">Credit / Debit Payment Info</h2>
+            <form class="payment-form" action="" method="get">
+                <!-- Card Number -->
+                <div class="input-cardnum input-div">
+                    <label for="cardnum">Card #</label>
+                    <input type="text" id="cardnum" name="cardnum" class="input-container"
+                        placeholder="1234 5678 9012 3456" required/>
+                </div>
+
+                <!-- Expiry Date -->
+                <div class="input-expiry input-div">
+                    <label for="expiry">Expiry Date</label>
+                    <input type="month" id="expiry" name="expiry" class="input-container" required />
+                </div>
+
+                <!-- Name on Card -->
+                <div class="input-name input-div">
+                    <label for="cardname">Name on Card</label>
+                    <input type="text" id="cardname" name="cardname" class="input-container"
+                        placeholder="FULL NAME (as on card)" required />
+                </div>
+
+                <!-- CVV -->
+                <div class="input-cvv input-div">
+                    <label for="cvv">CVV</label>
+                    <input type="text" id="cvv" name="cvv" class="input-container" placeholder="123" maxlength="4"
+                        required />
+                </div>
+
+                <!-- Submit Button -->
+                <div class="button-div">
+                    <button class="pay-btn">PAY NOW</button>
+                </div>
+            </form>
+
+        </div>
+
+        <!-- Cart details -->
+        <div class="cart-div same-grid-cell">
+            <!-- Cart Title -->
+            <div class="cart-title">
+                <img class="cart-img" src="images/buttons/cart.gif">
+                <span class="cart-title-txt">YOUR CART</span>
+            </div>
+
+            <!-- Cart Items -->
+            <div class="cart-items-container">
+                <div class="cart-product-card">
+                    <img class="cart-bqt-img" src="images/bouquets/b1.png">
+                    <span class="cart-bqt-name">Bouquet Name</span>
+                    <span class="cart-bqt-total">$25 x 3 = $75</span>
+                    <div class="cart-bqt-btns">
+
+                        <button class="cart-btn add-bqt">
+                            <img class="cart-add-img" src="images/buttons/add.png">
+                        </button>
+
+                        <button class="cart-btn minus-bqt">
+                            <img class="cart-minus-img" src="images/buttons/minus.png">
+                        </button>
+
+                        <button class="cart-btn remove-bqt">
+                            <img class="cart-delete-img" src="images/buttons/delete.png">
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Total Bill Section -->
+            <div class="cart-total">
+                <span class="total-title">TOTAL BILL<br>INCLUDING:</span>
+                <span class="prov-tax">7% GST</span>
+                <span class="fed-tax">5% HST</span>
+
+                <!-- This should be updated depending on the cart-items and 12% tax in total -->
+                <span class="total-sales">$250</span>
+            </div>
+
+
+        </div>
+        
+    </div>
+
+    <script src="checkout.js"></script>
+    <script src="cart.js"></script>
+</body>
+
+</html>

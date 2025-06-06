@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link id="tab-icon" rel="icon" type="image/gif" href="images/logos/yellow-onlyflower-logo.png">
+    <title>FloLab | Products</title>
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="products.css">
+</head>
+
+<body>
+    <!-- NAVBAR GRID -->
+    <div class="navbar-links">
+
+        <!-- Left Navbar Buttons -->
+        <div class="left-btns">
+            <div class="home-btn-div navbar-icons-width">
+                <button class="home-btn" onclick="window.location.href='index.html'">
+                    <img class="anim-icon" src="images/buttons/home.gif" alt="Home Icon" />
+                    <span class="nav-txt">Home</span>
+                </button>
+            </div>
+
+            <!-- DROPDOWN: Help -->
+            <div class="nav-item dropdown navbar-icons-width">
+                <div class="dropdown-trigger">
+                    <img class="anim-icon" src="images/buttons/faq.gif" alt="Help Icon" />
+                    <span class="nav-txt">Help ▾</span>
+                </div>
+                <div class="dropdown-content">
+                    <a class="nav-txt" href="faq.html">FAQ</a>
+                    <a class="nav-txt" href="contact.html" style="cursor: not-allowed;">Contact Us</a>
+                </div>
+            </div>
+
+            <!-- DROPDOWN: Bouquets -->
+            <div class="nav-item dropdown navbar-icons-width">
+                <div class="dropdown-trigger">
+                    <img class="anim-icon white-bg" src="images/logos/logo-flower.png" alt="Bouquets Icon" />
+                    <span class="nav-txt">Bouquets ▾</span>
+                </div>
+                <div class="dropdown-content">
+                    <a class="nav-txt" href="products.html">Pre-built</a>
+                    <a class="nav-txt" href="customize.html">Customize</a>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- CENTER LOGO -->
+        <div class="logo-btn-div">
+            <button class="logo-btn" onclick="window.location.href='index.html'">
+                <img class="nav-logo-img" src="images/logos/main-logo.png" alt="Home Logo Button">
+            </button>
+        </div>
+
+        <!-- Right Navbar Buttons -->
+        <div class="right-btns">
+            <div class="login-btn-div navbar-icons-width">
+                <button class="auth-link" onclick="window.location.href='login.html'">
+                    <img class="anim-icon" src="images/buttons/signup.gif" alt="Sign Up Icon" />
+                    <span class="nav-txt">Sign Up / Log In</span>
+                </button>
+            </div>
+
+            <div class="cart-btn-div navbar-icons-width">
+                <button class="cart-button" class="cart-link">
+                    <img class="anim-icon" src="images/buttons/cart.gif" />
+                    <span class="nav-txt cart-count">0</span>
+                </button>
+            </div>
+
+        </div>
+
+    </div>
+    <!-- END OF NAVBAR STUFF - COPY TILL HERE -->
+
+    <!-- Product Filters & Links -->
+    <div class="products-container">
+
+        <!-- ===== Filters Panel ===== -->
+        <div class="filters-div">
+            <div class="filters-title">
+                <span>FILTERS</span>
+            </div>
+
+            <!-- === Dropdown for Occasions === -->
+            <div class="occasions-drop drop-btn-div">
+                <div class="filter-type"><span>OCCASION:</span></div>
+                <select class="hoverEffect" id="occasion-select">
+                    <option value="">Pick one</option>
+                    <option value="Birthday">🎂 Birthday</option>
+                    <option value="Wedding">👰‍♀️ Wedding</option>
+                    <option value="Romance">💝 Romance</option>
+                    <option value="Sympathy">🕊️ Sympathy</option>
+                    <option value="Spring Special">🌳 Spring Special</option>
+                    <option value="20% Off">🛍️ 20% Off</option>
+                </select>
+            </div>
+
+            <!-- === Dropdown for Price === -->
+            <div class="price-drop drop-btn-div">
+                <div class="filter-type"><span>PRICE:</span></div>
+                <select class="hoverEffect" id="price-select">
+                    <option value="">Pick one</option>
+                    <option value="15-60">💸 $15 – $60</option>
+                    <option value="60-90">💸💸 $60 – $90</option>
+                    <option value="90-120">💸💸💸 $90 – $120</option>
+                    <option value="low-high">⬇️ Low to High</option>
+                    <option value="high-low">⬆️ High to Low</option>
+                </select>
+            </div>
+
+            <!-- === Dropdown for Size === -->
+            <div class="size-drop drop-btn-div">
+                <div class="filter-type"><span>SIZE:</span></div>
+                <select class="hoverEffect" id="size-select">
+                    <option value="">Pick one</option>
+                    <option value="Small">▫️ Small</option>
+                    <option value="Medium">◻️ Medium</option>
+                    <option value="Large">⬜ Large</option>
+                </select>
+            </div>
+
+            <!-- === Dropdown for Flower Type === -->
+            <div class="flower-drop drop-btn-div">
+                <div class="filter-type"><span>FLOWER:</span></div>
+                <select class="hoverEffect" id="flower-select">
+                    <option value="">Pick one</option>
+                    <option value="Rose">🌹 Rose</option>
+                    <option value="Sunflower">🌻 Sunflower</option>
+                    <option value="Tulip">🌷 Tulip</option>
+                    <option value="Hibiscus">🌺 Hibiscus</option>
+                    <option value="Lily">🌸 Lily</option>
+                </select>
+            </div>
+
+            <!-- === Dropdown for Color === -->
+            <div class="colors-drop drop-btn-div">
+                <div class="filter-type"><span>COLOUR:</span></div>
+                <select class="hoverEffect" id="color-select">
+                    <option value="">Pick one</option>
+                    <option value="White">🤍 White</option>
+                    <option value="Red">♥️ Red</option>
+                    <option value="Yellow">💛 Yellow</option>
+                    <option value="Pink">💗 Pink</option>
+                    <option value="Blue">💙 Blue</option>
+                    <option value="Purple">💜 Purple</option>
+                </select>
+            </div>
+
+            <div class="filter-reset">
+                <button class="reset-filters-btn hoverEffect">
+                    <span class="reset-txt">Reset Filters</span>
+                    <img class="reset-img" src="images/buttons/reset.png" alt="Reset Arrow Img">
+                </button>
+            </div>
+        </div>
+
+        <!-- ===== Product-Cards Div ===== -->
+
+        <div class="product-section">
+            <div class="products-div">
+                <!-- bouquet product card 1 -->
+                <div class="product-card" data-occasion="Birthday" data-price="70" data-size="Large"
+                    data-flowers="Rose" data-colors="Red">
+                    <button class="product-img-btn hoverEffect go-to-landing">
+                        <img class="product-img" src="images/bouquets/b1.png" alt="Lava Love Image">
+                    </button>
+                    <button class="product-name-btn hoverEffect go-to-landing">
+                        <span class="bouquet-name">Lava Love</span>
+                    </button>
+                    <div class="bouquet-price-div">
+                        <span class="bouquet-price">$70</span>
+                    </div>
+                    <button class="addtocart-btn hoverEffect">
+                        <img class="addtocart-img" src="images/buttons/add-to-cart.png" alt="Add to Cart">
+                    </button>
+                </div>
+
+                <!-- bouquet product card 2 -->
+                <div class="product-card" data-occasion="Wedding" data-price="35" data-size="Large"
+                    data-flowers="Sunflower,Tulip" data-colors="Yellow,Pink,White">
+                    <button class="product-img-btn hoverEffect go-to-landing">
+                        <img class="product-img" src="images/bouquets/b2.png" alt="Blushing Bride Image">
+                    </button>
+                    <button class="product-name-btn hoverEffect go-to-landing">
+                        <span class="bouquet-name">Blushing Bride</span>
+                    </button>
+                    <div class="bouquet-price-div">
+                        <span class="bouquet-price">$35</span>
+                    </div>
+                    <button class="addtocart-btn hoverEffect">
+                        <img class="addtocart-img" src="images/buttons/add-to-cart.png" alt="Add to Cart">
+                    </button>
+                </div>
+
+                <!-- bouquet product card 3 -->
+                <div class="product-card" data-occasion="Romance" data-price="29" data-size="Medium"
+                    data-flowers="Tulip,Hibiscus" data-colors="Pink,Blue,White">
+                    <button class="product-img-btn hoverEffect go-to-landing">
+                        <img class="product-img" src="images/bouquets/b3.png" alt="Midnight Romance Image">
+                    </button>
+                    <button class="product-name-btn hoverEffect go-to-landing">
+                        <span class="bouquet-name">Midnight Romance</span>
+                    </button>
+                    <div class="bouquet-price-div">
+                        <span class="bouquet-price">$29</span>
+                    </div>
+                    <button class="addtocart-btn hoverEffect">
+                        <img class="addtocart-img" src="images/buttons/add-to-cart.png" alt="Add to Cart">
+                    </button>
+                </div>
+
+                <!-- bouquet product card 4 -->
+                <div class="product-card" data-occasion="Sympathy" data-price="32" data-size="Medium"
+                    data-flowers="Hibiscus,Lily" data-colors="White,Pink">
+                    <button class="product-img-btn hoverEffect go-to-landing">
+                        <img class="product-img" src="images/bouquets/b4.png" alt="Spring Harmony Image">
+                    </button>
+                    <button class="product-name-btn hoverEffect go-to-landing">
+                        <span class="bouquet-name">Spring Harmony</span>
+                    </button>
+                    <div class="bouquet-price-div">
+                        <span class="bouquet-price">$32</span>
+                    </div>
+                    <button class="addtocart-btn hoverEffect">
+                        <img class="addtocart-img" src="images/buttons/add-to-cart.png" alt="Add to Cart">
+                    </button>
+                </div>
+
+                <!-- bouquet product card 5 -->
+                <div class="product-card" data-occasion="Romance" data-price="35" data-size="Medium"
+                    data-flowers="Hibiscus,Rose" data-colors="Pink,Red,White">
+                    <button class="product-img-btn hoverEffect go-to-landing">
+                        <img class="product-img" src="images/bouquets/b5.png" alt="Eternal Love Image">
+                    </button>
+                    <button class="product-name-btn hoverEffect go-to-landing">
+                        <span class="bouquet-name">Eternal Love</span>
+                    </button>
+                    <div class="bouquet-price-div">
+                        <span class="bouquet-price">$35</span>
+                    </div>
+                    <button class="addtocart-btn hoverEffect" >
+                        <img class="addtocart-img" src="images/buttons/add-to-cart.png" alt="Add to Cart">
+                    </button>
+                </div>
+
+                <!-- bouquet product card 6 -->
+                <div class="product-card" data-occasion="20% Off" data-price="38" data-size="Medium"
+                    data-flowers="Rose,Sunflower" data-colors="Red,Yellow">
+                    <button class="product-img-btn hoverEffect go-to-landing">
+                        <img class="product-img" src="images/bouquets/b6.png" alt="Morning Dew Image">
+                    </button>
+                    <button class="product-name-btn hoverEffect go-to-landing">
+                        <span class="bouquet-name">Morning Dew</span>
+                    </button>
+                    <div class="bouquet-price-div">
+                        <span class="bouquet-price">$38</span>
+                    </div>
+                    <button class="addtocart-btn hoverEffect" >
+                        <img class="addtocart-img" src="images/buttons/add-to-cart.png" alt="Add to Cart">
+                    </button>
+                </div>
+
+                <!-- bouquet product card 7 -->
+                <div class="product-card" data-occasion="Birthday" data-price="65" data-size="Large"
+                    data-flowers="Rose,Sunflower" data-colors="Red,Yellow">
+                    <button class="product-img-btn hoverEffect go-to-landing">
+                        <img class="product-img" src="images/bouquets/b7.png" alt="Crimson Sunrise Image">
+                    </button>
+                    <button class="product-name-btn hoverEffect go-to-landing">
+                        <span class="bouquet-name">Crimson Sunrise</span>
+                    </button>
+                    <div class="bouquet-price-div">
+                        <span class="bouquet-price">$65</span>
+                    </div>
+                    <button class="addtocart-btn hoverEffect" >
+                        <img class="addtocart-img" src="images/buttons/add-to-cart.png" alt="Add to Cart">
+                    </button>
+                </div>
+
+                <!-- bouquet product card 8 -->
+                <div class="product-card" data-occasion="Wedding" data-price="25" data-size="Small"
+                    data-flowers="Sunflower,Tulip" data-colors="Yellow,Pink,White">
+                    <button class="product-img-btn hoverEffect go-to-landing">
+                        <img class="product-img" src="images/bouquets/b8.png" alt="Golden Blush Image">
+                    </button>
+                    <button class="product-name-btn hoverEffect go-to-landing">
+                        <span class="bouquet-name">Golden Blush</span>
+                    </button>
+                    <div class="bouquet-price-div">
+                        <span class="bouquet-price">$25</span>
+                    </div>
+                    <button class="addtocart-btn hoverEffect" >
+                        <img class="addtocart-img" src="images/buttons/add-to-cart.png" alt="Add to Cart">
+                    </button>
+                </div>
+
+                <!-- bouquet product card 9 -->
+                <div class="product-card" data-occasion="Romance" data-price="25" data-size="Large"
+                    data-flowers="Tulip,Hibiscus" data-colors="Pink,Blue">
+                    <button class="product-img-btn hoverEffect go-to-landing">
+                        <img class="product-img" src="images/bouquets/b9.png" alt="Twilight Whisper Image">
+                    </button>
+                    <button class="product-name-btn hoverEffect go-to-landing">
+                        <span class="bouquet-name">Twilight Whisper</span>
+                    </button>
+                    <div class="bouquet-price-div">
+                        <span class="bouquet-price">$25</span>
+                    </div>
+                    <button class="addtocart-btn hoverEffect" >
+                        <img class="addtocart-img" src="images/buttons/add-to-cart.png" alt="Add to Cart">
+                    </button>
+                </div>
+
+                <!-- bouquet product card 10 -->
+                <div class="product-card" data-occasion="Sympathy" data-price="35" data-size="Medium"
+                    data-flowers="Hibiscus,Lily" data-colors="Blue,Purple,White">
+                    <button class="product-img-btn hoverEffect go-to-landing">
+                        <img class="product-img" src="images/bouquets/b10.png" alt="Midnight Serenity Image">
+                    </button>
+                    <button class="product-name-btn hoverEffect go-to-landing">
+                        <span class="bouquet-name">Midnight Serenity</span>
+                    </button>
+                    <div class="bouquet-price-div">
+                        <span class="bouquet-price">$35</span>
+                    </div>
+                    <button class="addtocart-btn hoverEffect" >
+                        <img class="addtocart-img" src="images/buttons/add-to-cart.png" alt="Add to Cart">
+                    </button>
+                </div>
+
+                <!-- bouquet product card 11 -->
+                <div class="product-card" data-occasion="Spring Special" data-price="45" data-size="Large"
+                    data-flowers="Lily,Rose" data-colors="Purple,Red">
+                    <button class="product-img-btn hoverEffect go-to-landing">
+                        <img class="product-img" src="images/bouquets/b11.png" alt="Royal Bloom Image">
+                    </button>
+                    <button class="product-name-btn hoverEffect go-to-landing">
+                        <span class="bouquet-name">Royal Bloom</span>
+                    </button>
+                    <div class="bouquet-price-div">
+                        <span class="bouquet-price">$45</span>
+                    </div>
+                    <button class="addtocart-btn hoverEffect" >
+                        <img class="addtocart-img" src="images/buttons/add-to-cart.png" alt="Add to Cart">
+                    </button>
+                </div>
+
+                <!-- bouquet product card 12 -->
+                <div class="product-card" data-occasion="20% Off" data-price="48" data-size="Large"
+                    data-flowers="Rose,Sunflower" data-colors="Red,Yellow">
+                    <button class="product-img-btn hoverEffect go-to-landing">
+                        <img class="product-img" src="images/bouquets/b12.png" alt="Radiant Duo Image">
+                    </button>
+                    <button class="product-name-btn hoverEffect go-to-landing">
+                        <span class="bouquet-name">Radiant Duo</span>
+                    </button>
+                    <div class="bouquet-price-div">
+                        <span class="bouquet-price">$48</span>
+                    </div>
+                    <button class="addtocart-btn hoverEffect" >
+                        <img class="addtocart-img" src="images/buttons/add-to-cart.png" alt="Add to Cart">
+                    </button>
+                </div>
+
+                <!-- bouquet product card 13 -->
+                <div class="product-card" data-occasion="Birthday" data-price="23" data-size="Small"
+                    data-flowers="Sunflower,Tulip" data-colors="Yellow,Pink">
+                    <button class="product-img-btn hoverEffect go-to-landing">
+                        <img class="product-img" src="images/bouquets/b13.png" alt="Sunny Petal Image">
+                    </button>
+                    <button class="product-name-btn hoverEffect go-to-landing">
+                        <span class="bouquet-name">Sunny Petal</span>
+                    </button>
+                    <div class="bouquet-price-div">
+                        <span class="bouquet-price">$23</span>
+                    </div>
+                    <button class="addtocart-btn hoverEffect" >
+                        <img class="addtocart-img" src="images/buttons/add-to-cart.png" alt="Add to Cart">
+                    </button>
+                </div>
+
+                <!-- bouquet product card 14 -->
+                <div class="product-card" data-occasion="Wedding" data-price="60" data-size="Medium"
+                    data-flowers="Tulip,Hibiscus" data-colors="Pink,Blue">
+                    <button class="product-img-btn hoverEffect go-to-landing">
+                        <img class="product-img" src="images/bouquets/b14.png" alt="Ocean Dreams Image">
+                    </button>
+                    <button class="product-name-btn hoverEffect go-to-landing">
+                        <span class="bouquet-name">Ocean Dreams</span>
+                    </button>
+                    <div class="bouquet-price-div">
+                        <span class="bouquet-price">$60</span>
+                    </div>
+                    <button class="addtocart-btn hoverEffect" >
+                        <img class="addtocart-img" src="images/buttons/add-to-cart.png" alt="Add to Cart">
+                    </button>
+                </div>
+
+                <!-- bouquet product card 15 -->
+                <div class="product-card" data-occasion="Romance" data-price="70" data-size="Medium"
+                    data-flowers="Hibiscus,Lily" data-colors="Blue,Purple">
+                    <button class="product-img-btn hoverEffect go-to-landing">
+                        <img class="product-img" src="images/bouquets/b15.png" alt="Lavender Grace Image">
+                    </button>
+                    <button class="product-name-btn hoverEffect go-to-landing">
+                        <span class="bouquet-name">Lavender Grace</span>
+                    </button>
+                    <div class="bouquet-price-div">
+                        <span class="bouquet-price">$70</span>
+                    </div>
+                    <button class="addtocart-btn hoverEffect" >
+                        <img class="addtocart-img" src="images/buttons/add-to-cart.png" alt="Add to Cart">
+                    </button>
+                </div>
+
+                <!-- bouquet product card 16 -->
+                <div class="product-card" data-occasion="Sympathy" data-price="65" data-size="Medium"
+                    data-flowers="Lily,Rose" data-colors="Purple,Red">
+                    <button class="product-img-btn hoverEffect go-to-landing">
+                        <img class="product-img" src="images/bouquets/b16.png" alt="Velvet Rose Image">
+                    </button>
+                    <button class="product-name-btn hoverEffect go-to-landing">
+                        <span class="bouquet-name">Velvet Rose</span>
+                    </button>
+                    <div class="bouquet-price-div">
+                        <span class="bouquet-price">$65</span>
+                    </div>
+                    <button class="addtocart-btn hoverEffect" >
+                        <img class="addtocart-img" src="images/buttons/add-to-cart.png" alt="Add to Cart">
+                    </button>
+                </div>
+
+                <!-- bouquet product card 17 -->
+                <div class="product-card" data-occasion="Spring Special" data-price="55" data-size="Medium"
+                    data-flowers="Rose,Sunflower" data-colors="Red,Yellow">
+                    <button class="product-img-btn hoverEffect go-to-landing">
+                        <img class="product-img" src="images/bouquets/b17.png" alt="Autumn Flame Image">
+                    </button>
+                    <button class="product-name-btn hoverEffect go-to-landing">
+                        <span class="bouquet-name">Autumn Flame</span>
+                    </button>
+                    <div class="bouquet-price-div">
+                        <span class="bouquet-price">$55</span>
+                    </div>
+                    <button class="addtocart-btn hoverEffect" >
+                        <img class="addtocart-img" src="images/buttons/add-to-cart.png" alt="Add to Cart">
+                    </button>
+                </div>
+
+                <!-- bouquet product card 18 -->
+                <div class="product-card" data-occasion="Wedding" data-price="30" data-size="Large"
+                    data-flowers="Sunflower,Tulip" data-colors="Yellow,Pink,White">
+                    <button class="product-img-btn hoverEffect go-to-landing">
+                        <img class="product-img" src="images/bouquets/b18.png" alt="Blushing Horizon Image">
+                    </button>
+                    <button class="product-name-btn hoverEffect go-to-landing">
+                        <span class="bouquet-name">Blushing Horizon</span>
+                    </button>
+                    <div class="bouquet-price-div">
+                        <span class="bouquet-price">$30</span>
+                    </div>
+                    <button class="addtocart-btn hoverEffect" >
+                        <img class="addtocart-img" src="images/buttons/add-to-cart.png" alt="Add to Cart">
+                    </button>
+                </div>
+
+                <!-- bouquet product card 19 -->
+                <div class="product-card" data-occasion="20% Off" data-price="15" data-size="Small"
+                    data-flowers="Sunflower,Tulip" data-colors="Blue,Pink">
+                    <button class="product-img-btn hoverEffect go-to-landing">
+                        <img class="product-img" src="images/bouquets/b19.png" alt="Blushing Horizon Image">
+                    </button>
+                    <button class="product-name-btn hoverEffect go-to-landing">
+                        <span class="bouquet-name">Hues of Heart</span>
+                    </button>
+                    <div class="bouquet-price-div">
+                        <span class="bouquet-price">$15</span>
+                    </div>
+                    <button class="addtocart-btn hoverEffect" >
+                        <img class="addtocart-img" src="images/buttons/add-to-cart.png" alt="Add to Cart">
+                    </button>
+                </div>
+
+                <!-- bouquet product card 20 -->
+                <div class="product-card" data-occasion="20% Off" data-price="30" data-size="Large"
+                    data-flowers="Sunflower,Hibiscus,Rose" data-colors="Yellow,Red,White">
+                    <button class="product-img-btn hoverEffect go-to-landing">
+                        <img class="product-img" src="images/bouquets/b20.png" alt="Blushing Horizon Image">
+                    </button>
+                    <button class="product-name-btn hoverEffect go-to-landing">
+                        <span class="bouquet-name">Blossomic Reds</span>
+                    </button>
+                    <div class="bouquet-price-div">
+                        <span class="bouquet-price">$30</span>
+                    </div>
+                    <button class="addtocart-btn hoverEffect" >
+                        <img class="addtocart-img" src="images/buttons/add-to-cart.png" alt="Add to Cart">
+                    </button>
+                </div>
+
+                <!-- bouquet product card 21 -->
+                <div class="product-card" data-occasion="Romance" data-price="45" data-size="Large"
+                    data-flowers="Sunflower,Tulip" data-colors="Yellow,Pink,White">
+                    <button class="product-img-btn hoverEffect go-to-landing">
+                        <img class="product-img" src="images/bouquets/b21.png" alt="Tulip Doves Image">
+                    </button>
+                    <button class="product-name-btn hoverEffect go-to-landing">
+                        <span class="bouquet-name">Tulip Doves</span>
+                    </button>
+                    <div class="bouquet-price-div">
+                        <span class="bouquet-price">$45</span>
+                    </div>
+                    <button class="addtocart-btn hoverEffect" >
+                        <img class="addtocart-img" src="images/buttons/add-to-cart.png" alt="Add to Cart">
+                    </button>
+                </div>
+
+                <!-- bouquet product card 22 -->
+                <div class="product-card" data-occasion="Romance" data-price="47" data-size="Large"
+                    data-flowers="Sunflower,Tulip,Rose" data-colors="Purple,Red,White">
+                    <button class="product-img-btn hoverEffect go-to-landing">
+                        <img class="product-img" src="images/bouquets/b22.png" alt="Tulip Doves Image">
+                    </button>
+                    <button class="product-name-btn hoverEffect go-to-landing">
+                        <span class="bouquet-name">Lavender & Doves</span>
+                    </button>
+                    <div class="bouquet-price-div">
+                        <span class="bouquet-price">$47</span>
+                    </div>
+                    <button class="addtocart-btn hoverEffect" >
+                        <img class="addtocart-img" src="images/buttons/add-to-cart.png" alt="Add to Cart">
+                    </button>
+                </div>
+
+
+                <!-- bouquet product card 23 -->
+                <div class="product-card" data-occasion="Birthday" data-price="45" data-size="Medium"
+                    data-flowers="Rose,Tulip,Hibiscus" data-colors="Pink,Blue,Purple">
+                    <button class="product-img-btn hoverEffect go-to-landing">
+                        <img class="product-img" src="images/bouquets/b23.png" alt="Blushing Horizon Image">
+                    </button>
+                    <button class="product-name-btn hoverEffect go-to-landing">
+                        <span class="bouquet-name">B'day Blossoms</span>
+                    </button>
+                    <div class="bouquet-price-div">
+                        <span class="bouquet-price">$45</span>
+                    </div>
+                    <button class="addtocart-btn hoverEffect" >
+                        <img class="addtocart-img" src="images/buttons/add-to-cart.png" alt="Add to Cart">
+                    </button>
+                </div>
+
+                <!-- bouquet product card 24 -->
+                <div class="product-card" data-occasion="Wedding" data-price="85" data-size="Medium"
+                    data-flowers="Rose,Lily,Tulip" data-colors="Pink,Purple,Blue">
+                    <button class="product-img-btn hoverEffect go-to-landing">
+                        <img class="product-img" src="images/bouquets/b24.png" alt="Blushing Horizon Image">
+                    </button>
+                    <button class="product-name-btn hoverEffect go-to-landing">
+                        <span class="bouquet-name">Everlasting Vows</span>
+                    </button>
+                    <div class="bouquet-price-div">
+                        <span class="bouquet-price">$85</span>
+                    </div>
+                    <button class="addtocart-btn hoverEffect" >
+                        <img class="addtocart-img" src="images/buttons/add-to-cart.png" alt="Add to Cart">
+                    </button>
+                </div>
+
+                <!-- bouquet product card 25 -->
+                <div class="product-card" data-occasion="Sympathy" data-price="120" data-size="Large"
+                    data-flowers="Sunflower,Tulip,Rose,Hibiscus" data-colors="Purple,Pink,Blue">
+                    <button class="product-img-btn hoverEffect go-to-landing">
+                        <img class="product-img" src="images/bouquets/b25.png" alt="Blushing Horizon Image">
+                    </button>
+                    <button class="product-name-btn hoverEffect go-to-landing">
+                        <span class="bouquet-name">Serene Tribute</span>
+                    </button>
+                    <div class="bouquet-price-div">
+                        <span class="bouquet-price">$120</span>
+                    </div>
+                    <button class="addtocart-btn hoverEffect" >
+                        <img class="addtocart-img" src="images/buttons/add-to-cart.png" alt="Add to Cart">
+                    </button>
+                </div>
+
+                <!-- This button takes the user to the TOP again-->
+                <div class=" product-card scroll-top-div">
+                    <button class="scroll-top-btn hoverEffect"
+                        onclick="document.querySelector('.product-section').scrollTo({ top: 0, behavior: 'smooth' });">
+                        <span class="scroll-top-txt">SCROLL TO TOP</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--LOADING THE JS FILE at LAST
+    : This ensures the page structure is parsed before your script runs. -->
+    <script src="index.js"></script>
+    <script src="cart.js"></script>
+    <script>
+
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.products-div .addtocart-btn').forEach(btn => {
+                btn.addEventListener('click', e => {
+                    const card = e.target.closest('.product-card');
+                    const name = card.querySelector('.bouquet-name').textContent.trim();
+                    const price = parseFloat(card.querySelector('.bouquet-price').textContent.replace('$', ''));
+                    const img = card.querySelector('.product-img').src;
+
+                    /* img path is unique ⇒ use it as id */
+                    FlowerCart.addItem({ id: img, name, price, img });
+                });
+            });
+        });
+
+
+    </script>
+</body>
+
+</html>

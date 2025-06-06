@@ -1,0 +1,145 @@
+/* ==========BACKGROUND========== */
+
+body {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #f6d365, #fda085);
+  overflow: clip;
+}
+
+.faq-header {
+  height: fit-content;
+  width: fit-content;
+
+  font-weight: 800;
+  font-size: 2rem;
+  margin: -1% auto;
+}
+
+.faq-container {
+  height: 72vh;
+  max-width: 80vw;
+  max-height: 75vh;
+  margin: -0.5% auto; /* Centers the Div */
+
+  border-radius: 8px;
+  overflow: trim;
+
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-areas:
+  "a f"
+  "a f"
+  "b f"
+  "b f"
+  "c f"
+  "c f"
+  "d f"
+  "d f"
+  "e f"
+  "e f";
+  gap: 5px 8px;
+
+  padding: 0.2rem;
+}
+
+.q-cat-same-style {
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.cat-btn {
+  height: 100%;
+  width: 100%;
+  outline: 2px solid  black;
+  border:none;
+  cursor: pointer;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: end;
+  column-gap: 15px;
+
+  color:#000;
+}
+.cat-btn-txt {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.cat-btn:hover {
+  transform: translateY(-2px);
+  transform: scale(1.05);
+}
+.finger-img {
+  height: 75px;
+}
+.q-cat1 {
+  grid-area: a;
+}
+.q-cat2 {
+  grid-area: b;
+}
+.q-cat3 {
+  grid-area: c;
+}
+.q-cat4 {
+  grid-area: d;
+}
+.q-cat5 {
+  grid-area: e;
+}
+.questions {
+  grid-area: f;
+  justify-self: start;
+  align-self: center;
+  height: 100%;
+  width: 100%;
+
+  overflow-y: scroll;
+
+  background: royalblue;
+  outline: 2px solid whitesmoke;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* The selected Que category get these props */
+.active-cat {
+  outline: 3px solid whitesmoke;
+  color: whitesmoke;
+  background: royalblue;
+  border: none;
+  cursor:not-allowed;
+}
+.active-cat:hover {
+  transform: none;
+}
+.questions details {
+  margin: 1rem;
+  color: whitesmoke;
+  font-size: 1.5rem;
+  border-bottom: 2px solid whitesmoke;
+}
+
+.questions details:hover {
+  transform: translateY(-2px);
+}
+.questions summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+.active-cat .finger-img {
+  display: none;
+ /* color: whitesmoke; */
+}
+
+
+

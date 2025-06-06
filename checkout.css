@@ -1,0 +1,627 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    width: 100vw;
+    background: url(images/wallpapers/bg4.png) center/cover no-repeat;
+    overflow: clip;
+}
+
+.forms-container {
+    height: 80vh;
+    width: 90vw;
+    position: relative;
+    bottom: -1rem;
+    margin: auto;
+    /* background-color: #00000049; */
+    display: grid;
+    grid-template-columns: 5fr 4fr;
+    grid-template-areas:
+        "a a a a a a c c c c c"
+        "a a a a a a c c c c c"
+        "a a a a a a c c c c c"
+        "a a a a a a c c c c c"
+        "a a a a a a c c c c c"
+        "b b b b b b c c c c c"
+        "b b b b b b c c c c c"
+        "b b b b b b c c c c c";
+    gap: 5px 5px;
+}
+
+.rcv-details {
+    grid-area: a;
+    padding-top: 5px;
+    max-width: 60vw;
+    max-height: 47.5vh;
+    background: #ffffff19;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 8px 8px 0 0;
+
+    display: grid;
+    grid-template-rows: 50px auto;
+    grid-template-areas:
+        "a a a b b b"
+        "c c c c c c"
+        "c c c c c c"
+        "c c c c c c"
+        "c c c c c c"
+        "c c c c c c";
+}
+
+.pmt-form {
+    grid-area: b;
+    max-width: 60vw;
+    min-height: 28vh;
+}
+
+.cart-div {
+    grid-area: c;
+    min-width: 30vw !important;
+    max-height: 80vh;
+}
+
+.same-grid-cell {
+    height: 100%;
+    max-width: 100%;
+    /* outline: 3px solid #000; */
+    /* background: peachpuff; */
+}
+
+/* Receiver's Form Section Styles */
+.same-area-style {
+    height: 100%;
+    width: 90%;
+    background-color: whitesmoke;
+    outline: 2px solid #000;
+    border-radius: 3rem;
+    justify-self: center;
+}
+
+.radio-btn-1 {
+    grid-area: a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background: #3c67c1; */
+}
+
+.radio-btn-2 {
+    grid-area: b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background: #02ae27; */
+}
+
+/* FORM GRID AND STYLES */
+/* Container for the whole form */
+.recv-form-div {
+    grid-area: c;
+    width: 100%;
+    justify-self: start;
+
+    /* background: #2a7cff; */
+    display: flex;
+    align-items: center;
+}
+
+/* The form background & grid */
+.recv-form {
+    width: 98%;
+    height: 95%;
+    margin: auto;
+    background: transparent;
+    border: none;
+    /* soften corners */
+    display: grid;
+    grid-template-areas:
+        "a b b m m c c"
+        "d e e e e l l"
+        "f g g g g h h"
+        "i j j k k k k";
+    gap: 5px;
+}
+
+/* Each “input-div” */
+.input-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0.15rem;
+
+    background: #000;
+    border-radius: 4px;
+    transition: background 0.2s;
+}
+
+/* Grid‐area assignments */
+.input-prefix {
+    grid-area: a;
+}
+
+.input-first-name {
+    grid-area: b;
+}
+
+.input-mid-name {
+    grid-area: m;
+}
+
+.input-last-name {
+    grid-area: c;
+}
+
+.input-phone {
+    grid-area: d;
+}
+
+.input-email {
+    grid-area: e;
+}
+
+.input-del-date {
+    grid-area: l;
+}
+
+.input-unit {
+    grid-area: f;
+}
+
+.input-street {
+    grid-area: g;
+}
+
+.input-city {
+    grid-area: h;
+}
+
+.input-province {
+    grid-area: i;
+}
+
+.input-postal {
+    grid-area: j;
+}
+
+.msg-div {
+    grid-area: k;
+}
+
+/* Common style for Labels */
+.input-div label {
+    font-size: 1.25rem;
+    color: whitesmoke;
+    margin-bottom: 0.3rem;
+}
+
+/* Text inputs, number, email, and select */
+.input-div select {
+    width: 100%;
+    font-size: 0.9rem;
+    padding: 0.5rem 0.6rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: #fff;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.input-container {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    font-size: 0.9rem;
+    padding: 0.5rem 0.6rem;
+    border: none;
+    border-radius: 4px;
+    background: #fff;
+}
+
+/* “Save” button styling */
+.msg-div {
+    height: 100%;
+    align-self: center;
+    background: #000;
+}
+
+.msg-box {
+    width: 100%;
+    min-height: 2rem;
+    resize: none;
+    padding: 0.25rem 0.5rem;
+    line-height: 1.4;
+    font-family: inherit;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.input-container:focus,
+.input-div select:focus
+{
+    outline: 1px solid red;
+    border: 1px solid red;
+}
+
+textarea:focus {
+    outline: 1px solid red;
+    border: 1px solid red;
+}
+
+/* This brings a little distance in form Personal & address details */
+.input-unit,
+.input-street,
+.input-city {
+    margin-top: 1rem;
+}
+
+
+/* Hide native radio appearance */
+.select-btn {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    /* Create custom circle */
+    width: 1.25rem;
+    height: 1.25rem;
+    border: 2px solid #000;
+    border-radius: 1rem;
+    position: relative;
+    margin-right: 0.5rem;
+    cursor: pointer;
+    transition: border-color 0.2s, background-color 0.2s;
+}
+
+.select-btn:checked {
+    border-color: red;
+}
+
+.select-btn:checked::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0.75rem;
+    height: 0.75rem;
+    background-color: red;
+    border-radius: 50%;
+}
+
+.select-btn:hover {
+    transform: scale(1.05);
+    border-color: red;
+}
+
+.radio-btn-1 label,
+.radio-btn-2 label {
+    font-weight: 600;
+    font-size: 1.25rem;
+    transition: color 0.2s;
+}
+
+/*######################################*/
+/* Styles for Payment form*/
+
+.payment-title {
+    width: 40%;
+    font-size: 1.25rem;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 0.5rem;
+    color: whitesmoke;
+    background: #000;
+    border: 2px solid #000;
+    border-radius: 1rem;
+}
+
+.pmt-form {
+    background: #ffffff19;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 0 0 8px 8px;
+}
+
+/* Grid layout: two columns for fields, then a full–width button */
+.payment-form {
+    display: grid;
+    grid-template-areas:
+        "cardnum expiry"
+        "name    cvv   "
+        "button  button";
+    gap: 0.75rem;
+    padding: 1rem;
+}
+
+/* Assign each cell to its grid area */
+.input-cardnum {
+    grid-area: cardnum;
+}
+
+.input-expiry {
+    grid-area: expiry;
+}
+
+.input-name {
+    grid-area: name;
+}
+
+.input-cvv {
+    grid-area: cvv;
+}
+
+.button-div {
+    grid-area: button;
+}
+
+.pay-btn {
+    width: 100%;
+    padding: 0.65rem;
+    background: #8cd790;
+    color: #000;
+    border: none;
+    outline: 3px solid #2E7D32;
+    border-radius: 4px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.pay-btn:hover {
+    background: #2E7D32;
+    color: whitesmoke;
+    outline: 3px solid #8cd790;
+    transform: translateY(-1px);
+}
+
+/************************************/
+/* CART DIV AND STYLES */
+
+.cart-div {
+
+    height: 80vh;
+    border-radius: 8px;
+    background: #ffffff19;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 5px 0 5px 0;
+
+    display: grid;
+
+    grid-template-rows: 10 60vh 10vh;
+    grid-template-areas:
+        "a"
+        "b"
+        "c";
+    row-gap: 10px;
+    box-sizing: border-box;
+    place-content: space-around;
+}
+
+.cart-title {
+    height: fit-content;
+    grid-area: a;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.cart-title-txt {
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.cart-img {
+    height: 50px;
+    width: auto;
+    clip-path: circle(50%);
+}
+
+.cart-items-container {
+    grid-area: b;
+    height: 55vh;
+    width: 28vw;
+
+    margin: 0 auto;
+    outline: 2px solid black;
+    background: whitesmoke;
+    border-radius: 4px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+    scrollbar-color: #ff5e01 #000;
+    scrollbar-width: auto;
+}
+
+/* Cart Items Product Card Style */
+.cart-product-card {
+    border: 1px solid black;
+    height: 8rem !important;
+    margin: 10px auto;
+    width: 95%;
+    background: rgba(255, 0, 0, 0.144);
+
+    display: grid;
+
+    grid-template-areas:
+        "a b b b b b b"
+        "a c c c c c c"
+        "a d d d d d d";
+    gap: 2px;
+
+    align-content: center;
+    align-items: center;
+}
+
+.cart-bqt-img {
+    grid-area: a;
+    height: 120px;
+    width: auto;
+    /* border: 1px solid #000; */
+    justify-self: center;
+    align-self: center;
+}
+
+.cart-bqt-name {
+    grid-area: b;
+    height: 90%;
+    width: 100%;
+    grid-area: b;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #000;
+    justify-self: start;
+    align-self: center;
+    /* outline: 1px solid #000; */
+}
+
+.cart-bqt-total {
+    grid-area: c;
+    height: 90%;
+    min-width: 100%;
+    font-size: 1rem;
+    font-weight: 500;
+    color: red;
+    word-spacing: 1rem;
+    justify-self: start;
+    align-self: center;
+    /* outline: 1px solid #000; */
+}
+
+.cart-bqt-btns {
+    height: 90%;
+    min-width: 100%;
+    grid-area: d;
+    justify-self: start;
+    align-self: center;
+
+    /* outline: 1px solid #000; */
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+
+}
+
+.cart-btn {
+    height: 50px !important;
+    width: 50px !important;
+    border: none;
+    cursor: pointer;
+
+    border-radius: 50%;
+
+    background: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: auto;
+}
+
+.cart-btn:hover {
+    transform: translateY(-2px);
+    transform: scale(1.05);
+}
+
+.cart-add-img,
+.cart-minus-img,
+.cart-delete-img {
+    height: 50px !important;
+    width: 50px !important;
+    margin: auto;
+    object-fit: cover;
+    clip-path: circle(50%);
+}
+
+.cart-add-img {
+    transform: scale(1.10);
+}
+
+.cart-total {
+    grid-area: c;
+    width: 28vw;
+
+    margin: 0 auto;
+    outline: 2px solid black;
+    background: whitesmoke;
+    border-radius: 4px;
+
+    display: grid;
+    /* Define seven equal columns so that the area names align properly */
+    grid-template-columns: repeat(7, 1fr);
+
+    grid-template-areas:
+        "a a b b c c c"
+        "a a d d c c c";
+    gap: 3px;
+
+    /* Center items vertically in each cell */
+    align-content: center;
+    justify-content: center;
+}
+
+.total-title {
+    grid-area: a;
+    height: fit-content;
+    width: 100%;
+
+    font-size: 1.25rem;
+    font-weight: 500;
+    /* border: 1px solid #000; */
+    justify-self: start;
+    text-align: center;
+}
+
+.prov-tax {
+    grid-area: b;
+    height: fit-content;
+    width: 100%;
+    font-size: 1rem;
+    color: red;
+    /* border: 1px solid #000; */
+
+    justify-self: end;
+    align-self: end;
+    text-align: center;
+}
+
+.total-sales {
+    grid-area: c;
+    height: fit-content;
+    width: 80%;
+    margin-right: 2rem;
+    font-size: 2.5rem;
+    font-weight: 600;
+    /* border: 1px solid #000; */
+
+    justify-self: end;
+    align-self: center;
+    text-align: center;
+
+}
+
+.fed-tax {
+    grid-area: d;
+    height: fit-content;
+    width: 100%;
+    font-size: 1rem;
+    color: red;
+    /* border: 1px solid #000; */
+
+    /* Moves it to the top-left of its 2-column span */
+    justify-self: end;
+    align-content: start;
+    text-align: center;
+}
+
+.contact-link {
+    cursor: not-allowed;
+}
