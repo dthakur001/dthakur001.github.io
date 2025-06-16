@@ -178,3 +178,7 @@
     cursor: pointer;
     transform: scale(1.05);
 }
+
+.contact-link {
+    cursor: not-allowed;
+}
